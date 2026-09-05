@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      NOTION_SECRET: ${{ secrets.NOTION_SECRET }}
+      NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
       NOTION_VERSION: ${{ secrets.NOTION_VERSION }}
       ROLES_DATABASE: ${{ secrets.ROLES_DATABASE }}
       JINXES_DATABASE: ${{ secrets.JINXES_DATABASE }}
