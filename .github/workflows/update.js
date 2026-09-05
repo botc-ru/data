@@ -1,4 +1,4 @@
-import { writeFile } from "fs/promises"
+import { mkdir, writeFile } from "fs/promises"
 
 const TEAMS = {
     '2bfc6e58-485f-8006-9d07-fe360e067c6b': 'townsfolk',
@@ -10,7 +10,7 @@ const TEAMS = {
     '2bfc6e58-485f-8048-884c-fa29f3dbe5d6': 'loric',
 }
 
-async function saveDatabase(sourceId, name) {
+async function fetchDatabase(sourceId, name) {
     let results = [], hasMore = true, cursor = undefined, page = 1
 
     while (hasMore) {
@@ -21,7 +21,6 @@ async function saveDatabase(sourceId, name) {
         results.push(...data.results)
     }
 
-    await fetchIcons(name, results)
     return results
 }
 
@@ -68,8 +67,8 @@ async function mapRoles(roles, jinxes) {
         if (result) results[result.id] = result
     }
 
-    console.log(`Saving script.json with ${Object.keys(results).length} characters...`)
-    await writeFile('script.json', JSON.stringify(results, null, 2), { encoding: "utf8" })
+    await writeFile('roles.json', JSON.stringify(results, null, 2), { encoding: "utf8" })
+    console.log(`roles.json saved with ${Object.keys(results).length} roles.`)
 }
 
 function addJinx(map, roleId, otherRoleId, reason) {
@@ -116,31 +115,40 @@ function plainText(richText) {
 }
 
 async function fetchIcons(folder, json) {
-    for (let i = 0; i < json.length; i++) {
-        const url = json?.[i]?.icon?.file?.url
-        const name = json?.[i]?.properties?.ID?.rich_text?.[0]?.plain_text
-            ?? json?.[i]?.id
-        if (!url) continue
+    await mkdir(`images/${folder}`, { recursive: true })
 
-        const res = await fetch(url)
+    let done = 0
+    await Promise.all(json.map(page => fetchIcon(folder, page, () => {
+        done++
+        if (done % 10 === 0) console.log(`${folder} icons: #${done}`)
+    })))
+}
 
-        if (!res.ok) {
-            console.error(`Failed to download icon for ${name}`)
-            continue
-        }
-        if (i % 10 === 0)
-            console.log(`- Got ${folder} icon #${i+1}`)
+async function fetchIcon(folder, page, onDone) {
+    const url = page?.icon?.file?.url
+    const name = page?.properties?.ID?.rich_text?.[0]?.plain_text ?? page?.id
+    if (!url) return
 
-        const arrayBuffer = await res.arrayBuffer()
-        const buffer = Buffer.from(arrayBuffer)
+    const res = await fetch(url)
 
-        await writeFile(`images/${folder}/${name}.png`, buffer)
+    if (!res.ok) {
+        console.error(`Failed to download icon for ${name}`)
+        return
     }
+
+    const arrayBuffer = await res.arrayBuffer()
+    const buffer = Buffer.from(arrayBuffer)
+
+    await writeFile(`images/${folder}/${name}.png`, buffer)
+    onDone()
 }
 
 const [roles, jinxes] = await Promise.all([
-    saveDatabase(process.env.ROLES_DATABASE, 'roles'),
-    saveDatabase(process.env.JINXES_DATABASE, 'jinxes'),
+    fetchDatabase(process.env.ROLES_DATABASE, 'roles'),
+    fetchDatabase(process.env.JINXES_DATABASE, 'jinxes'),
 ])
 
-await mapRoles(roles, jinxes)
+await Promise.all([
+    mapRoles(roles, jinxes),
+    fetchIcons('roles', roles),
+])
