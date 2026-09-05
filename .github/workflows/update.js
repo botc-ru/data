@@ -87,7 +87,7 @@ function mapRole(role, jinxes) {
         name: plainText(p['Название'].title),
         team,
         ability: plainText(p['Способность'].rich_text),
-        image: `https://raw.githubusercontent.com/botc-ru/script/main/images/roles/${id}.png`,
+        image: `https://raw.githubusercontent.com/botc-ru/data/refs/heads/main/images/roles/${id}.png`,
     }
 
     const flavor = plainText(p['Цитата'].rich_text)
