@@ -1,0 +1,2134 @@
+{
+  "hermit": {
+    "id": "hermit",
+    "name": "Еремит",
+    "team": "outsider",
+    "ability": "Имеет способности всех Изгоев из сценария.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/hermit.png"
+  },
+  "wraith": {
+    "id": "wraith",
+    "name": "Призрак",
+    "team": "minion",
+    "ability": "Может открывать глаза ночью. Просыпается вместе с остальными злыми игроками.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/wraith.png",
+    "flavor": "Ra'āb ina pān ṣilli ša dāri. Rigim qallu ina šūri, šītu ša šunātīka iredde, u napšutka idlul ina pān maṣṣartī dāriti."
+  },
+  "mortician_fall_of_rome": {
+    "id": "mortician_fall_of_rome",
+    "name": "Похоронщик",
+    "team": "townsfolk",
+    "ability": "Каждую ночь* узнаёт, есть ли злодеи среди живых соседей казнённого днём игрока.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/mortician_fall_of_rome.png",
+    "otherNight": 21
+  },
+  "princess": {
+    "id": "princess",
+    "name": "Принцесса",
+    "team": "townsfolk",
+    "ability": "Если в первый день номинировала и казнила игрока, Демон не убивает этой ночью.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/princess.png",
+    "jinxes": [
+      {
+        "id": "cannibal",
+        "reason": "Если Каннибал номинировал, казнил и убил Принцессу сегодня, Демон не убивает этой ночью."
+      }
+    ]
+  },
+  "emperor_fall_of_rome": {
+    "id": "emperor_fall_of_rome",
+    "name": "Император",
+    "team": "traveller",
+    "ability": "Каждый день выбирайте исход первой казни. Если вы выбираете защитить сегодняшнюю цель — она выживает. Иначе вы этой ночью узнаёте её мировоззрение.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/emperor_fall_of_rome.png",
+    "flavor": "\"Какая смерть предпочитательнее всех прочих? Нежданная.\"",
+    "otherNight": 6
+  },
+  "highpriest_fall_of_rome": {
+    "id": "highpriest_fall_of_rome",
+    "name": "Верховный жрец",
+    "team": "traveller",
+    "ability": "Каждый день публично выбирайте уникального живого игрока, чтобы благословить: если большинство согласны, с ним случается нечто хорошее.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/highpriest_fall_of_rome.png",
+    "flavor": "\"Пренебрегать знамениями богов — значит отрицать их существование.\" — Цицерон, 106 — 43 до н.э.",
+    "otherNight": 4
+  },
+  "sibyl_fall_of_rome": {
+    "id": "sibyl_fall_of_rome",
+    "name": "Сивилла",
+    "team": "traveller",
+    "ability": "Каждый день после первой казни вы можете публично выбрать мёртвого игрока: он может номинировать. Если большинство мёртвых и вы согласны, его кандидат казнится.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/sibyl_fall_of_rome.png",
+    "flavor": "\"Так изменюсь, что стану невидима для всех; но голос мой вы узнаете. И голосом дарую вам второй шанс.\""
+  },
+  "architect_fall_of_rome": {
+    "id": "architect_fall_of_rome",
+    "name": "Архитектор",
+    "team": "traveller",
+    "ability": "Каждую ночь* выбирайте игрока: 1) он становится не-игровым персонажем того же типа, или 2) он меняется персонажами с игроком того же типа.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/architect_fall_of_rome.png",
+    "flavor": "\"Я застал Рим кирпичным, а оставил мраморным.\" — Октавиан Август, 63 до н.э. — 14 н.э.",
+    "otherNight": 5
+  },
+  "mercenary_fall_of_rome": {
+    "id": "mercenary_fall_of_rome",
+    "name": "Наёмник",
+    "team": "traveller",
+    "ability": "Каждую ночь* вы получаете способность игрока, который сегодня публично заявлял, что он Спартак. Если Наёмника изгоняют, изгоняют и вас. [+1 Наёмник противоположного мировоззрения]",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/mercenary_fall_of_rome.png",
+    "otherNight": 3
+  },
+  "ceasar_fall_of_rome": {
+    "id": "ceasar_fall_of_rome",
+    "name": "Цезарь",
+    "team": "demon",
+    "ability": "Каждую ночь* выбирает игрока: тот умирает. Впервые когда казнили злодея, ночью выбирает ещё 1 игрока.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/ceasar_fall_of_rome.png",
+    "flavor": "\"Пришёл, увидел, победил.\" — Гай Юлий Цезарь, 100 — 44 до н.э.",
+    "otherNight": 13
+  },
+  "hannibal_fall_of_rome": {
+    "id": "hannibal_fall_of_rome",
+    "name": "Ганнибал",
+    "team": "demon",
+    "ability": "Думает, что он добрый игрок. Приспешники знают 3 блефа. Каждую ночь* кто-то может умереть. Первый умерший Ганнибал становится добрым. [+1 Ганнибал]",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/hannibal_fall_of_rome.png",
+    "flavor": "\"Или найду путь, или проложу его.\" — Ганнибал, 247 — ок. 182 до н.э.",
+    "firstNight": 20,
+    "otherNight": 12
+  },
+  "crassus_fall_of_rome": {
+    "id": "crassus_fall_of_rome",
+    "name": "Красс",
+    "team": "demon",
+    "ability": "Каждую ночь* выбирает игрока: тот умирает. Если первый Красс заявил, что он Спартак, и умер при 5+ живых игроках, один из Приспешников станет Крассом.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/crassus_fall_of_rome.png",
+    "flavor": "\"Кто стремится к великому, должен быть готов к великим страданиям...\" — Плутарх, ок. 49 — 119 н.э.",
+    "otherNight": 11
+  },
+  "cleopatra_fall_of_rome": {
+    "id": "cleopatra_fall_of_rome",
+    "name": "Клеопатра",
+    "team": "demon",
+    "ability": "Каждую ночь выбирает 2 игроков: если завтра они будут номинировать, то умрут ночью. Каждый день, если ни 1 добрый игрок (не Странник) не номинировал, зло побеждает.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/cleopatra_fall_of_rome.png",
+    "flavor": "\"Глупец! Разве ты не видишь, что я могла отравить тебя сотню раз, кабы могла жить без тебя!\" — Клеопатра VII, 69 — 30 до н.э.",
+    "firstNight": 22,
+    "otherNight": 10
+  },
+  "augur_fall_of_rome": {
+    "id": "augur_fall_of_rome",
+    "name": "Авгур",
+    "team": "minion",
+    "ability": "Горожанин, который его номинировал, немедленно становится Дурным знамением.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/augur_fall_of_rome.png",
+    "flavor": "\"И что всё — и на войне, и в мире, дома и за рубежом — совершалось лишь после гадания по птицам?\" — Тит Ливий, 59 до н.э. — 17 н.э."
+  },
+  "glykon_fall_of_rome": {
+    "id": "glykon_fall_of_rome",
+    "name": "Гликон",
+    "team": "minion",
+    "ability": "Способности других игроков могут считать его добрым. Номинированных им добрых игроков могут до рассвета считать злыми, злых - добрыми, а Горожане отравлены.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/glykon_fall_of_rome.png",
+    "flavor": "\"Они вошли — и, конечно же, решили, что это чудо: крошечная змея всего за несколько дней выросла в огромного змея с человеческим лицом — да ещё и ручного!\" — Лукиан Самосатский о лжепророке Александре Абонутейском"
+  },
+  "haruspex_fall_of_rome": {
+    "id": "haruspex_fall_of_rome",
+    "name": "Гаруспик",
+    "team": "minion",
+    "ability": "Каждую ночь выбирает игрока: узнаёт его роль. Первый, кто был выбран дважды, умирает. [+ Спартак]",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/haruspex_fall_of_rome.png",
+    "flavor": "\"Именно благочестие и религия, а также особая мудрость видеть, что всем управляет божественная сила бессмертных богов, сделали нас выше прочих стран и народов.\" — Цицерон, 106 — 46 до н.э.",
+    "firstNight": 23,
+    "otherNight": 14
+  },
+  "temptress_fall_of_rome": {
+    "id": "temptress_fall_of_rome",
+    "name": "Искусительница",
+    "team": "minion",
+    "ability": "В первую ночь выбирает 2 игроков: они узнают, что были выбраны. Впервые когда одного из них казнят, другой ночью становится злым.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/temptress_fall_of_rome.png",
+    "flavor": "\"Ничто не могло разлучить нас при жизни, но теперь, в смерти, мы, пожалуй, поменяемся местами...\" — Клеопатра VII, 69 — 30 до н.э.",
+    "firstNight": 22,
+    "otherNight": 2
+  },
+  "badomen_fall_of_rome": {
+    "id": "badomen_fall_of_rome",
+    "name": "Дурное знамение",
+    "team": "outsider",
+    "ability": "Не знает, что он Дурное знамение. Думает, что он Горожанин, но получает ложь. Способности других игроков могут считать его злодеем, даже если он мёртв.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/badomen_fall_of_rome.png",
+    "flavor": "\"Бойся мартовских ид.\" — Гай Юлий Цезарь, 100 — 44 до н.э."
+  },
+  "spartacus_fall_of_rome": {
+    "id": "spartacus_fall_of_rome",
+    "name": "Спартак",
+    "team": "outsider",
+    "ability": "Раз за игру, если злодей угадал, кто Спартак, зло побеждает. Способности других игроков могут считать его Горожанином, если в этот день заявил, что он Спартак.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/spartacus_fall_of_rome.png",
+    "flavor": "\"Человек не должен покорно принимать судьбу — иначе она его сломит.\" — Спартак, ок. 103 — 71 до н.э."
+  },
+  "winemaker_fall_of_rome": {
+    "id": "winemaker_fall_of_rome",
+    "name": "Винодел",
+    "team": "outsider",
+    "ability": "Соседние Горожане пьяны, даже если Винодел мёртв, но каждую вторую ночь он пьян вместо них.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/winemaker_fall_of_rome.png",
+    "flavor": "\"В вине — истина.\" — Плиний Старший, 23 — 79 н.э.",
+    "firstNight": 24,
+    "otherNight": 7
+  },
+  "thetwins_fall_of_rome": {
+    "id": "thetwins_fall_of_rome",
+    "name": "Близнецы",
+    "team": "outsider",
+    "ability": "В первую ночь узнаёт игрока: если одного из них казнили, все Горожане пьяны до след. заката.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/thetwins_fall_of_rome.png",
+    "flavor": "\"Ссора между Ремом и Ромулом явила разделение земного града внутри себя...\" — Августин Блаженный, 354 — 430 н.э.",
+    "firstNight": 25,
+    "otherNight": 8
+  },
+  "scholar_fall_of_rome": {
+    "id": "scholar_fall_of_rome",
+    "name": "Учёный",
+    "team": "townsfolk",
+    "ability": "Раз за игру, когда номинировал живого Изгоя, тот немедленно становится Горожанином, которого нет в игре. [+1 Изгой]",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/scholar_fall_of_rome.png",
+    "flavor": "\"Просыпаясь утром, помни, какое это драгоценное счастье — жить, дышать, мыслить, радоваться и любить.\" — Марк Аврелий, 121 — 180 н.э.",
+    "otherNight": 1
+  },
+  "blacksmith_fall_of_rome": {
+    "id": "blacksmith_fall_of_rome",
+    "name": "Кузнец",
+    "team": "townsfolk",
+    "ability": "Раз за игру, когда убит Демоном: выживает и получает способность Горожанина, которого нет в игре.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/blacksmith_fall_of_rome.png",
+    "flavor": "\"Всякий новый почин рождается из чьего-то завершения.\" — Сенека, 4 до н.э. — 65 н.э.",
+    "otherNight": 15
+  },
+  "actor_fall_of_rome": {
+    "id": "actor_fall_of_rome",
+    "name": "Актёр",
+    "team": "townsfolk",
+    "ability": "Раз за игру днём публично называет 3 игроков (не себя) и 3 разных типа ролей. Ночью узнаёт, сколько из них угадал.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/actor_fall_of_rome.png",
+    "flavor": "\"Хорошо ли сыграна роль? Тогда проводите меня аплодисментами.\" — Октавиан Август, 63 до н.э. — 14 н.э.",
+    "otherNight": 23
+  },
+  "gladiator_fall_of_rome": {
+    "id": "gladiator_fall_of_rome",
+    "name": "Гладиатор",
+    "team": "townsfolk",
+    "ability": "Раз за игру днём публично выбирает живого игрока. Ночью оба играют в КНБ: кто проиграл, умирает.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/gladiator_fall_of_rome.png",
+    "flavor": "\"Простите. Меня учили владеть мечом, а не словом.\" — Крикс, 72 до н.э.",
+    "otherNight": 16
+  },
+  "merchant_fall_of_rome": {
+    "id": "merchant_fall_of_rome",
+    "name": "Торговец",
+    "team": "townsfolk",
+    "ability": "Раз за игру ночью* узнаёт роли тех, кто его номинировал.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/merchant_fall_of_rome.png",
+    "flavor": "\"Скупость — всего лишь слово, которым завистники клеймят честолюбивых.\" — Марк Лициний Красс, 115 — 53 до н.э.",
+    "otherNight": 24
+  },
+  "centurion_fall_of_rome": {
+    "id": "centurion_fall_of_rome",
+    "name": "Центурион",
+    "team": "townsfolk",
+    "ability": "Если номинировал и казнил живого игрока, команда того проигрывает. Демон не может его убить. Если заявил, что он Спартак: пьян до рассвета.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/centurion_fall_of_rome.png",
+    "flavor": "\"Легче найти людей, готовых умереть, чем тех, кто готов терпеть боль с терпением.\" — Гай Юлий Цезарь, 100 — 44 до н.э."
+  },
+  "standardbearer_fall_of_rome": {
+    "id": "standardbearer_fall_of_rome",
+    "name": "Знаменосец",
+    "team": "townsfolk",
+    "ability": "Если номинирован, публично называет уникальный факт о номинаторе (не о себе). Ночью узнает, прав ли он.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/standardbearer_fall_of_rome.png",
+    "flavor": "\"Не всегда говори всё, что знаешь. Но всегда знай, что говоришь.\" — Тиберий Клавдий, 10 до н.э. — 54 н.э.",
+    "otherNight": 22
+  },
+  "trumpeter_fall_of_rome": {
+    "id": "trumpeter_fall_of_rome",
+    "name": "Трубач",
+    "team": "townsfolk",
+    "ability": "Каждую ночь* узнаёт, сколько злодеев днём публично заявили, что они Спартак.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/trumpeter_fall_of_rome.png",
+    "flavor": "\"Я сделал всё, что должен был, но исход — в руках фортуны.\" — Нерон, 37 — 68 н.э.",
+    "otherNight": 20
+  },
+  "legionary_fall_of_rome": {
+    "id": "legionary_fall_of_rome",
+    "name": "Легионер",
+    "team": "townsfolk",
+    "ability": "Каждую ночь узнаёт, сколько живых злодеев сидят по часовой стрелке от него до следующего живого Легионера. [+0…+2 Легионера]",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/legionary_fall_of_rome.png",
+    "flavor": "\"Мы видим, что римляне обязаны завоеванием мира не чему иному, как постоянной выучке, строгой дисциплине в лагерях и неустанному совершенствованию воинских искусств.\" — Вегеций, ок. 385 — ок. 450 н.э.",
+    "firstNight": 29,
+    "otherNight": 19
+  },
+  "physician_fall_of_rome": {
+    "id": "physician_fall_of_rome",
+    "name": "Лекарь",
+    "team": "townsfolk",
+    "ability": "Каждую ночь выбирает 2 игроков (не себя): этой ночью они трезвы, здоровы и узнают правду. Раз за игру, если Демон убил одного из них, узнаёт роль Демона.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/physician_fall_of_rome.png",
+    "flavor": "\"Некоторые выздоравливают лишь потому, что верят врачам.\" — Гиппократ, ок. 460 — ок. 370 до н.э.",
+    "firstNight": 26,
+    "otherNight": 9
+  },
+  "vestalvirgin_fall_of_rome": {
+    "id": "vestalvirgin_fall_of_rome",
+    "name": "Весталка",
+    "team": "townsfolk",
+    "ability": "В первую ночь узнаёт 2 роли: 1 добрую и 1 злую, одна из них есть в игре. Когда эта роль умирает, ночью узнаёт ещё 2 роли.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/vestalvirgin_fall_of_rome.png",
+    "flavor": "\"Одни полагают, что долг весталок — лишь хранить священный огонь; другие же считают, что им доверены иные божественные тайны, сокрытые от всех, кроме них.\" — Плутарх, ок. 49 — 119 н.э.",
+    "firstNight": 28,
+    "otherNight": 18
+  },
+  "sculptor_fall_of_rome": {
+    "id": "sculptor_fall_of_rome",
+    "name": "Скульптор",
+    "team": "townsfolk",
+    "ability": "В первую ночь узнаёт игрока. Каждую ночь* узнаёт сторону игрока, которого тот номинировал.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/sculptor_fall_of_rome.png",
+    "flavor": "\"Лишь рука скульптора может разрушить чары и освободить фигуры, спящие в камне.\" — Микеланджело, 1501 г.",
+    "firstNight": 27,
+    "otherNight": 17
+  },
+  "iamspartacus_fall_of_rome": {
+    "id": "iamspartacus_fall_of_rome",
+    "name": "\"Я — Спартак!\"",
+    "team": "fabled",
+    "ability": "Каждый день до половины живых игроков (без Странников; округляя вверх) могут публично заявить, что они Спартак.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/iamspartacus_fall_of_rome.png",
+    "flavor": "\"Эго ранит глубже, чем сталь.\" — Спартак, ок. 103 до н.э. — 71 до н.э."
+  },
+  "phantomdetectives": {
+    "id": "phantomdetectives",
+    "name": "Призрачные Детективы",
+    "team": "fabled",
+    "ability": "Мёртвые игроки (не Демоны) сохраняют свои способности. Горожане начинают игру без способности, и получают её после смерти.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/phantomdetectives.png"
+  },
+  "ferryman": {
+    "id": "ferryman",
+    "name": "Лодочник",
+    "team": "fabled",
+    "ability": "В последний день все мёртвые игроки возвращают себе жетон голоса.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/ferryman.png",
+    "flavor": "Когда приходят праведные сны, они несут в себе вес истины."
+  },
+  "bootlegger": {
+    "id": "bootlegger",
+    "name": "Контрабандист",
+    "team": "fabled",
+    "ability": "Этот сценарий содержит неофициальные персонажи или правила.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/bootlegger.png",
+    "flavor": "Я привёз свежую партию из дома, настойку, которую я бы назвал \"Барроуфог\". Хочешь попробовать?"
+  },
+  "gardener": {
+    "id": "gardener",
+    "name": "Садовник",
+    "team": "fabled",
+    "ability": "Рассказчик распределяет одного или нескольких персонажей игрокам.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/gardener.png",
+    "flavor": "О нет, так не пойдёт. Аконит перемешан с прострелом, а болиголов душит морозник! О, дорогие мои, нам лучше начать заново. Принесите мои ножницы."
+  },
+  "stormcatcher": {
+    "id": "stormcatcher",
+    "name": "Ловец Штормов",
+    "team": "fabled",
+    "ability": "Рассказчик объявляет доброго персонажа. Если тот в игре, он может умереть только через казнь, но злые игроки узнают, кто это.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/stormcatcher.png",
+    "flavor": "На рассвете длинная тень храма тянется к фонтану. На закате обелиск заслоняет красное сияние, охлаждая тёплую воду под аркой. Все линии сходятся здесь. Шторм приближается, и это — этот покрытый галькой, пышный и святой уголок между яблонями — его око.",
+    "firstNight": 1,
+    "firstNightReminder": "В начале ночи объявите, какой персонаж получил защиту Ловца Штормов. Если этот персонаж в игре, отметьте этого игрока как \"В безопасности\". Разбудите каждого злого игрока и покажите им жетон персонажа, затем отмеченного игрока.\n Если персонаж не в игре, разбудите каждого злого игрока, покажите им жетон \"Эти персонажи не в игре\" и соответствующий жетон персонажа."
+  },
+  "djinn": {
+    "id": "djinn",
+    "name": "Джинн",
+    "team": "fabled",
+    "ability": "Есть особое правило Джинна. Все игроки знают, какое.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/djinn.png",
+    "flavor": "Мы не здесь. Ты не реален. Всё — иллюзия. Твои вопросы — гора огня в ясный день."
+  },
+  "spiritofivory": {
+    "id": "spiritofivory",
+    "name": "Дух Слоновой Кости",
+    "team": "fabled",
+    "ability": "В игре не может быть более одного дополнительного злого игрока.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/spiritofivory.png",
+    "flavor": "Пустошь зовёт. Кости обретают плоть, а затем превращаются в прах. Великий дух растёт. Великий дух наблюдает. Великий дух направляет. Человек слушает — или исчезает."
+  },
+  "sentinel": {
+    "id": "sentinel",
+    "name": "Часовой",
+    "team": "fabled",
+    "ability": "В игре может быть на 1 Изгоя больше или меньше.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/sentinel.png",
+    "flavor": "Имя, пожалуйста. Документы, пожалуйста. Оружие, пожалуйста."
+  },
+  "duchess": {
+    "id": "duchess",
+    "name": "Герцогиня",
+    "team": "fabled",
+    "ability": "Каждый день 3 игрока могут выбрать посетить ёё. Ночью* каждый из них узнаёт, сколько посетителей являются злыми, но один получит ложную информацию.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/duchess.png",
+    "flavor": "Мы принимаем гостей строго с 6 до 7. Чай в 6:15. Сконы в 6:45. Не опаздывайте. Дресс-код обязателен, как всегда.",
+    "otherNight": 1,
+    "otherNightReminder": "Будите каждого игрока, помеченного как «Посетитель» или «Ложная информация», по очереди. Покажите им жетон Герцогини, затем пальцами (1, 2, 3) укажите количество злых игроков среди посетителей, или, если будите игрока с «Ложной информацией», покажите любое число пальцев, кроме правильного количества злых посетителей."
+  },
+  "fiddler": {
+    "id": "fiddler",
+    "name": "Скрипач",
+    "team": "fabled",
+    "ability": "Один раз за игру Демон тайно выбирает соперника: все игроки голосуют, кто из них двоих победит.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/fiddler.png",
+    "flavor": "Я поставлю свою жизнь, что ты не победишь меня в соревновании по игре на скрипке, ты, косоглазый обормот! Пойдём выпьем, зажжём с музыкантами в пабе, повеселимся. А утром я врежу тебе сапогами, ты, грохочущий марионет!"
+  },
+  "buddhist": {
+    "id": "buddhist",
+    "name": "Буддист",
+    "team": "fabled",
+    "ability": "Первые 2 минуты каждого дня опытные игроки не могут говорить.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/buddhist.png",
+    "flavor": "Ты бросаешь шипы. Падая в мою тишину, они становятся цветами.",
+    "firstNight": 1,
+    "firstNightReminder": "Объявите, какие игроки подвержены эффекту Буддиста."
+  },
+  "angel": {
+    "id": "angel",
+    "name": "Ангел",
+    "team": "fabled",
+    "ability": "Что-то плохое может случиться с тем, кто больше всего виновен в смерти нового игрока.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/angel.png",
+    "flavor": "Пусть те, кто без греха, осмелятся поднять руку на моего избранного, ибо я поражу этих глупцов гневом и праведностью тысячи бурь.",
+    "firstNight": 1,
+    "firstNightReminder": "Объявите, какие игроки защищены Ангелом. Добавьте жетон \"Защищён\" к соответствующим игрокам."
+  },
+  "doomsayer": {
+    "id": "doomsayer",
+    "name": "Предвестник Рока",
+    "team": "fabled",
+    "ability": "Если в игре осталось 4 или более игроков, каждый живой игрок может один раз за игру публично выбрать, чтобы игрок его стороны умер.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/doomsayer.png",
+    "flavor": "И в день седьмой придут великие наводнения и мор на людей Деревни Воронов! Мертвые восстанут, а живые раскаются! О, горе! О, нечестивый день! Только великая жертва принесёт спасение! Так сказали Мудрецы Ностроса, и так говорю я."
+  },
+  "wizard": {
+    "id": "wizard",
+    "name": "Колдун",
+    "team": "minion",
+    "ability": "Один раз за игру может загадать желание. Если оно исполнится, то может иметь цену и оставить подсказку о своей природе.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/wizard.png",
+    "flavor": "Каждый мужчина и каждая женщина — звезда. Любовь — это закон, любовь под волей.",
+    "firstNight": 30,
+    "firstNightReminder": "Примените способность Колдуна, если возможно.",
+    "otherNight": 16,
+    "otherNightReminder": "Примените способность Колдуна, если возможно."
+  },
+  "xaan": {
+    "id": "xaan",
+    "name": "Ксаан",
+    "team": "minion",
+    "ability": "В ночь X все Горожане становятся отравленными до следующей ночи. [X Изгоев]",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/xaan.png",
+    "flavor": "Они падают. Один за другим. По два, по три, по пять.",
+    "firstNight": 26,
+    "firstNightReminder": "Отметь Ксаана НОЧЬ 1. Если X равен 1, отметьте Ксаана Х",
+    "otherNight": 12,
+    "otherNightReminder": "Отметь Ксаана номером ночи. Если сейчас ночь X, отметь Ксаана Х"
+  },
+  "boffin": {
+    "id": "boffin",
+    "name": "Учёный",
+    "team": "minion",
+    "ability": "Демон (даже если пьян или отравлен) получает способность доброго персонажа, которого нет в игре. Он и Ученый знают, какую.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/boffin.png",
+    "flavor": "Звездный водород, огромный, инертный; углерод, кислород, неоновые газы — всё разрушается. Молекулярный хаос, энтропия, создают новые космические явления, возрождение из атомного хаоса, коллапс плотной материи. Всё это — в крошечной бутылочке.",
+    "firstNight": 8,
+    "firstNightReminder": "Разбудите Учёного и Демона. Покажите жетон доброго персонажа, который не в игре. Уложите Учёного и Демона обратно спать.",
+    "jinxes": [
+      {
+        "id": "goon",
+        "reason": "Демон со способностью Громилы не может стать добрым."
+      },
+      {
+        "id": "drunk",
+        "reason": "Демон не может получить способность Пьяницы."
+      }
+    ]
+  },
+  "lordoftyphon": {
+    "id": "lordoftyphon",
+    "name": "Повелитель Бури",
+    "team": "demon",
+    "ability": "Каждую ночь* выбирает игрока: тот умирает.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/lordoftyphon.png",
+    "flavor": "В затенённых и забытых уголках космоса, где звёзды шепчут секреты пустоте, скрыта истина столь глубокая, что один её проблеск разрушает рассудок смертных.",
+    "firstNight": 2,
+    "firstNightReminder": "Замените соседей Повелителя Бури на Миньонов, разбудите их, сообщите их новую сторону и персонажа, затем выполните процедуру информации для Миньонов.",
+    "otherNight": 43,
+    "otherNightReminder": "Повелитель Бури выбирает игрока."
+  },
+  "zealot": {
+    "id": "zealot",
+    "name": "Фанатик",
+    "team": "outsider",
+    "ability": "Если в игре 5 или более живых игроков, обязан голосовать за каждую номинацию.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/zealot.png",
+    "flavor": "Мне нравится с тобой разговаривать. Твой разум мне симпатичен. Он похож на мой, за исключением того, что ты безумен.",
+    "jinxes": [
+      {
+        "id": "cannibal",
+        "reason": "Каннибал  узнаёт, что съел Фанатика."
+      }
+    ]
+  },
+  "alsaahir": {
+    "id": "alsaahir",
+    "name": "Аль-Саахир",
+    "team": "townsfolk",
+    "ability": "Каждый день, если публично угадывает, кто является Приспешниками, а кто Демоном, добро побеждает.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/alsaahir.png",
+    "flavor": "Я здесь из-за тебя, а ты здесь из-за меня."
+  },
+  "ogre": {
+    "id": "ogre",
+    "name": "Огр",
+    "team": "outsider",
+    "ability": "В первую ночь выбирает игрока (не себя): переходит в его команду (не узнаёт, в какую), даже если пьян или отравлен.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/ogre.png",
+    "flavor": "<ворчание><ухмылка></ворчание>",
+    "firstNight": 67,
+    "firstNightReminder": "Огр выбирает игрока"
+  },
+  "banshee": {
+    "id": "banshee",
+    "name": "Банши",
+    "team": "townsfolk",
+    "ability": "Если Демон убивает ёё, все игроки узнают об этом. С этого момента может номинировать дважды в день и голосовать дважды за каждую номинацию.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/banshee.png",
+    "flavor": "Синие глаза, рыжие волосы, недолго осталось, и ты будешь в могиле.",
+    "otherNight": 58,
+    "otherNightReminder": "Если убита Демоном этой ночью, объявите всем игрокам, что Банши умерла"
+  },
+  "summoner": {
+    "id": "summoner",
+    "name": "Призыватель",
+    "team": "minion",
+    "ability": "В первую ночь узнаёт 3 блефа. В третью ночь выбирает игрока и роль Демона: тот становится этим злым Демоном.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/summoner.png",
+    "flavor": "Славьтесь, стражи севера; разумом моим ты сражён. Славьтесь, стражи востока; волей моей ты подчинён. Славьтесь, стражи юга; что скрыто, теперь открыто. Славьтесь, стражи запада; щит в темноте.",
+    "firstNight": 17,
+    "firstNightReminder": "Покажите жетон *ЭТИ ПЕРСОНАЖИ НЕ В ИГРЕ*. Покажите 3 отсутствующих хороших персонажа.",
+    "otherNight": 30,
+    "otherNightReminder": "Обновите жетон напоминания Призывателя на соответствующую ночь. Если это 3-я ночь, Призыватель выбирает игрока и Демона. Усыпите Призывателя. Разбудите выбранного игрока. Покажите жетон *ВЫ ЯВЛЯЕТЕСЬ*, большой палец вниз и жетон выбранного Демона.",
+    "jinxes": [
+      {
+        "id": "zombuul",
+        "reason": "Если Призыватель призвал мёртвого игрока как Зомбула, его способность “умерев первый раз…” считается потраченой."
+      },
+      {
+        "id": "alchemist",
+        "reason": "Алхимик-Призыватель не получает блефы, и выбирает тип Демона, но не игрока. Если умер до того, как сделал выбор, зло побеждает."
+      },
+      {
+        "id": "clockmaker",
+        "reason": "Призыватель считается Демоном для Часовщика."
+      }
+    ]
+  },
+  "yaggababble": {
+    "id": "yaggababble",
+    "name": "Дурнотрёп",
+    "team": "demon",
+    "ability": "В первую ночь узнаёт секретную фразу. Каждый раз, когда произносит её публично, кто-то может умереть.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/yaggababble.png",
+    "flavor": "Убийства на улице Морг? Фальшивые новости! Гончие на вересковых болотах? Фальшивые новости! Смерть на Ниле? Фальшивые новости!",
+    "firstNight": 12,
+    "firstNightReminder": "Выберите секретную фразу. Разбудите Ягабаббла и сообщите ему его секретную фразу.",
+    "otherNight": 49,
+    "otherNightReminder": "За каждое произнесение фразы Ягабабблом сегодня вы можете выбрать игрока. Он умрёт."
+  },
+  "villageidiot": {
+    "id": "villageidiot",
+    "name": "Дурачок",
+    "team": "townsfolk",
+    "ability": "Каждую ночь выбирает игрока: узнает его сторону.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/villageidiot.png",
+    "flavor": "Розы синие, фиалки красные, Пожалуйста, переверните мои слова.",
+    "firstNight": 62,
+    "firstNightReminder": "Если Дурачков > 1, отметь 1 из них ПЬЯН. Дурачки просыпаются по очереди, выбирают игрока, покажи большой палец вверх или вниз",
+    "otherNight": 79,
+    "otherNightReminder": "Дурачки просыпаются по очереди, выбирают игрока, покажи большой палец вверх или вниз"
+  },
+  "kazali": {
+    "id": "kazali",
+    "name": "Казали",
+    "team": "demon",
+    "ability": "В первую ночь выбирает, кто является Приспешниками и какими. Каждую ночь* выбирает игрока: тот умирает.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/kazali.png",
+    "flavor": "Гон(з)алес6. Будьте осто8рожны. Меха4низм иNvert10ван. Ошибки инсти6тута. Переко{7}нфигурирование.",
+    "firstNight": 3,
+    "firstNightReminder": "Разбудите Казали, дайте выбрать Миньонов.",
+    "otherNight": 50,
+    "otherNightReminder": "Казали выбирает игрока.",
+    "jinxes": [
+      {
+        "id": "bountyhunter",
+        "reason": "Если Казали превратил Наёмника в Миньона, злой Горожанин не создаётся."
+      }
+    ]
+  },
+  "hatter": {
+    "id": "hatter",
+    "name": "Шляпник",
+    "team": "outsider",
+    "ability": "Если умер, то ночью Приспешники и Демон могут выбрать себе новую роль того же типа.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/hatter.png",
+    "flavor": "Одна Шляпа. Две Шляпы. Три Шляпы. Чайная Шляпа. Четыре Шляпы. Пять Шляп. Шесть Шляп. Палочные Шляпы.",
+    "otherNight": 54,
+    "otherNightReminder": "Если Шляпник умер сегодня или этой ночью, разбудите Миньонов и Демонов, позвольте им выбрать новые роли."
+  },
+  "ojo": {
+    "id": "ojo",
+    "name": "Охо",
+    "team": "demon",
+    "ability": "Каждую ночь* выбирает роль: та умирает. Если роль не в игре, Рассказчик выбирает, кто умрёт.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/ojo.png",
+    "flavor": "Как костёр в безлунную ночь… Я вижу тебя, смертный.",
+    "otherNight": 45,
+    "otherNightReminder": "Выбирает роль. Отметь игрока УБИТ"
+  },
+  "shugenja": {
+    "id": "shugenja",
+    "name": "Шугендзя",
+    "team": "townsfolk",
+    "ability": "В первый день узнаёт, находится ли ближайший злой игрок по часовой стрелке или против. Если они равноудалены, ответ случаен.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/shugenja.png",
+    "flavor": "Это сон. И это сон. Всё это сон.",
+    "firstNight": 61,
+    "firstNightReminder": "Покажи направление"
+  },
+  "plaguedoctor": {
+    "id": "plaguedoctor",
+    "name": "Чумной Доктор",
+    "team": "outsider",
+    "ability": "Когда умирает, Рассказчик получает способность Приспешника.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/plaguedoctor.png",
+    "flavor": "Пжалуйста, не двигайтес. Вам нужн време для оздоровл. Мирра-мирра."
+  },
+  "harpy": {
+    "id": "harpy",
+    "name": "Гарпия",
+    "team": "minion",
+    "ability": "Каждую ночь выбирает 2 игроков: завтра первый должен быть помешан, что второй злой, или один из них или оба могут умереть.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/harpy.png",
+    "flavor": "Я не видел дня прекраснее и присутствия зловещего.",
+    "firstNight": 39,
+    "firstNightReminder": "Выбирает двух игроков. Разбудите первую цель. Покажите ЭТОТ ПЕРСОНАЖ ВЫБРАЛ ВАС, жетон Гарпии, укажите на вторую цель",
+    "otherNight": 27,
+    "otherNightReminder": "Выбирает двух игроков. Разбудите первую цель. Покажите ЭТОТ ПЕРСОНАЖ ВЫБРАЛ ВАС, жетон Гарпии, укажите на вторую цель"
+  },
+  "highpriestess": {
+    "id": "highpriestess",
+    "name": "Высшая Жрица",
+    "team": "townsfolk",
+    "ability": "Каждую ночь узнаёт, с каким игроком, по мнению Рассказчика, ей стоит поговорить.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/highpriestess.png",
+    "flavor": "За личностью, использующей маски, скрывается настоящая жизнь. Бывают моменты, когда жизнь сбрасывает маску, и глубина отвечает глубине.",
+    "firstNight": 68,
+    "firstNightReminder": "Укажите на игрока.",
+    "otherNight": 86,
+    "otherNightReminder": "Укажите на игрока."
+  },
+  "steward": {
+    "id": "steward",
+    "name": "Стюард",
+    "team": "townsfolk",
+    "ability": "В первую ночь узнаёт 1 доброго игрока.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/steward.png",
+    "flavor": "Как ВЫ смеете обвинять её светлость в злодеянии? Я знаю её всю свою жизнь! Все девять лет!",
+    "firstNight": 57,
+    "firstNightReminder": "Укажите на доброго игрока."
+  },
+  "knight": {
+    "id": "knight",
+    "name": "Рыцарь",
+    "team": "townsfolk",
+    "ability": "В первую ночь узнаёт 2 игроков, среди них нет Демона.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/knight.png",
+    "flavor": "Когда человек лжёт, он убивает часть мира.",
+    "firstNight": 58,
+    "firstNightReminder": "Покажите 2 игроков ЗНАЕТ "
+  },
+  "vizier": {
+    "id": "vizier",
+    "name": "Визирь",
+    "team": "minion",
+    "ability": "Все игроки знают Визиря. Не может умереть днём. Если хорошие игроки голосовали, может решить, что казнь состоится немедленно. ",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/vizier.png",
+    "flavor": "Прекрасное решение, как всегда, государь. Такая мелкая провинность, как столкновение с епископом, действительно заслуживает вашей ‘справедливости’ и ‘милосердия’. Прогуляйтесь по садам. Посетите галерею и полюбуйтесь скульптурами фон Штрауфа. Расслабьтесь, государь. Оставьте всё… мне.",
+    "firstNight": 74,
+    "firstNightReminder": "Объявите игрока, который является Визирем, всей группе.",
+    "jinxes": [
+      {
+        "id": "investigator",
+        "reason": "Рассказчик не объявляет, что Визирь есть в игре."
+      }
+    ]
+  },
+  "organgrinder": {
+    "id": "organgrinder",
+    "name": "Шарманщик",
+    "team": "minion",
+    "ability": "Игроки закрывают глаза на время голосования, число голосов остаётся в секрете. Каждую ночь Шарманщик выбирает, будет ли он пьян завтра.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/organgrinder.png",
+    "flavor": "Ручки крутятся туда-сюда. Чем больше ты танцуешь, тем меньше знаешь, да.",
+    "firstNight": 33,
+    "firstNightReminder": "Показывает ДА или НЕТ",
+    "otherNight": 21,
+    "otherNightReminder": "Показывает ДА или НЕТ"
+  },
+  "riot": {
+    "id": "riot",
+    "name": "Бунт",
+    "team": "demon",
+    "ability": "На третий день Приспешники становятся Бунтами, а номинированные игроки умирают, и сразу же номинируют живого игрока.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/riot.png",
+    "flavor": "Да здравствует революция! Моя революция!",
+    "jinxes": [
+      {
+        "id": "atheist",
+        "reason": "На третий день, если Рассказчика номинировали, идёт подсчет голосов. Если порог голосов достигнут, игра заканчивается. Если нет – Рассказчик номинирует дальше."
+      },
+      {
+        "id": "monk",
+        "reason": "Если Бунт номинирует и казнит игрока, защищенного Монахом, добро побеждает."
+      },
+      {
+        "id": "grandmother",
+        "reason": "Если Бунт в игре и внука казнили, зло побеждает."
+      }
+    ]
+  },
+  "leviathan": {
+    "id": "leviathan",
+    "name": "Левиафан",
+    "team": "demon",
+    "ability": "Если более одного доброго игрока казнено, зло побеждает. Все игроки знают, что Левиафан в игре. После 5-го дня зло побеждает.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/leviathan.png",
+    "flavor": "До конца я борюсь с тобой. Из сердца Ада я вонзаю клинок. Из ненависти я выдыхаю последнее дыхание на тебя.",
+    "firstNight": 73,
+    "firstNightReminder": "Объявите: \"Левиафан в игре.\" Отметьте Левиафана напоминанием *ДЕНЬ 1*.",
+    "otherNight": 91,
+    "otherNightReminder": "При необходимости объявите: \"Левиафан в игре.\" Замените жетон напоминания.",
+    "jinxes": [
+      {
+        "id": "monk",
+        "reason": "Если Левиафан номинирует и казнит игрока, защищённого Монахом, добро побеждает."
+      },
+      {
+        "id": "grandmother",
+        "reason": "Если Левиафан в игре и внука казнили, зло побеждает."
+      }
+    ]
+  },
+  "legion": {
+    "id": "legion",
+    "name": "Легион",
+    "team": "demon",
+    "ability": "Каждую ночь* один игрок может умереть. Казнь не состоится, если голосовали только злые. Способности других игроков могут считать его Приспешником.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/legion.png",
+    "flavor": "Мы — холодный ветер зимнего дня. Мы — тень в безлунную ночь. Мы — яд в твоем чае и шепот в твоем ухе. Мы повсюду.",
+    "otherNight": 34,
+    "otherNightReminder": "Игрок может умереть."
+  },
+  "alhadikhia": {
+    "id": "alhadikhia",
+    "name": "Аль-Хадикия",
+    "team": "demon",
+    "ability": "Каждую ночь* может выбрать 3 игроков (все узнают, кого): каждый из них молча выбирает: жить или умереть, но если каждый решил жить, все  3 умирают.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/alhadikhia.png",
+    "flavor": "Молчание — золото.",
+    "otherNight": 46,
+    "otherNightReminder": "Аль-Хадихия выбирает трех игроков. Разбудите игрока, отмеченного *1*, и скажите: \"Аль-Хадихия выбрал\", затем имя игрока, затем \"Ты выбираешь жить?\" Он либо кивает, либо качает головой. Уложите его спать и соответственно добавьте или удалите покров. Повторите для игроков *2* и *3*. Если все трое игроков остались живы, добавьте покров всем троим."
+  },
+  "lleech": {
+    "id": "lleech",
+    "name": "Пиявица",
+    "team": "demon",
+    "ability": "Каждую ночь* выбирает игрока: тот умирает. В начале игры выбирает игрока: тот отравлен. Пиявица умирает, только если он мертв.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/lleech.png",
+    "flavor": "Вкусный, вкусный, вкусный, вкусный, вкусный, вкусный, вкусный, вкусный мозг— то есть пирог! Да, вкусный пирог. Именно это я имел в виду.",
+    "firstNight": 25,
+    "firstNightReminder": "Пиявица выбирает игрока. Отметь его ОТРАВЛЕН",
+    "otherNight": 47,
+    "otherNightReminder": "Выбирает игрока. Отметь его УБИТ",
+    "jinxes": [
+      {
+        "id": "slayer",
+        "reason": "Если Истребитель демонов убил Носителя, Пиявица умирает."
+      }
+    ]
+  },
+  "lilmonsta": {
+    "id": "lilmonsta",
+    "name": "Монстрёнок",
+    "team": "demon",
+    "ability": "Каждую ночь Приспешники выбирают игрока: этот игрок присматривает за Монстрёнком и является Демоном. Каждую ночь* один игрок может умереть.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/lilmonsta.png",
+    "flavor": "Шаг 1: Быть милым. Шаг 2: Завоевать мир. Шаг 3: Завтрак.",
+    "firstNight": 24,
+    "firstNightReminder": "Приспешники выбирают опекуна",
+    "otherNight": 48,
+    "otherNightReminder": "Приспешники выбирают опекуна. Один игрок может умереть.",
+    "jinxes": [
+      {
+        "id": "poppygrower",
+        "reason": "Если Монстрёнок и Маковод живы, Миньоны просыпаются по одному, пока один из них не решил взять себе жетон демона."
+      }
+    ]
+  },
+  "boomdandy": {
+    "id": "boomdandy",
+    "name": "Подрывник",
+    "team": "minion",
+    "ability": "Если его казнили: все, кроме 3 игроков, умирают. После отсчёта от 10 до 0 умирает игрок, на которого указывает большинство (включая мёртвых).",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/boomdandy.png",
+    "flavor": "Тик... Тик... Тик... Так."
+  },
+  "marionette": {
+    "id": "marionette",
+    "name": "Марионетка",
+    "team": "minion",
+    "ability": "Думает, что она Горожанин или Изгой, но это не так. Демон знает Марионетку. [Соседствует с Демоном]",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/marionette.png",
+    "flavor": "Слова, слова. Только на них мы и можем полагаться.",
+    "firstNight": 21,
+    "firstNightReminder": "Разбуди Демона. Покажите ему жетон Марионетка и игрока",
+    "jinxes": [
+      {
+        "id": "mathematician",
+        "reason": "Математик может узнать, что способность Марионетки сработала неправильно."
+      }
+    ]
+  },
+  "mezepheles": {
+    "id": "mezepheles",
+    "name": "Мезефель",
+    "team": "minion",
+    "ability": "В первую ночь узнаёт секретное слово. Первый добрый игрок, кто произнес его, становится злым следующей ночью.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/mezepheles.png",
+    "flavor": "То, что исходит только из сердца, покоряет сердца других.",
+    "firstNight": 40,
+    "firstNightReminder": "Покажите написанное слово.",
+    "otherNight": 28,
+    "otherNightReminder": "Если игрок отмечен напоминанием *СТАНОВИТСЯ ЗЛЫМ*, разбудите его. Покажите *ВЫ —* и знак пальцем вниз. Мезефель теряет свою способность."
+  },
+  "goblin": {
+    "id": "goblin",
+    "name": "Гоблин",
+    "team": "minion",
+    "ability": "Если был номинирован, до голосования публично заявил, что он Гоблин, и был казнён: его команда побеждает.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/goblin.png",
+    "flavor": "Не стоит оскорблять гоблинов. Правда, не стоит. Кстати, можно мне ещё кусочек торта?"
+  },
+  "psychopath": {
+    "id": "psychopath",
+    "name": "Психопат",
+    "team": "minion",
+    "ability": "Каждый день перед номинациями может публично выбрать игрока: тот умирает. Если Психопат казнён, то умираете только проиграв в 'камень-ножницы-бумага' номинировавшему.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/psychopath.png",
+    "flavor": "Сюрприз!"
+  },
+  "fearmonger": {
+    "id": "fearmonger",
+    "name": "Запугиватель",
+    "team": "minion",
+    "ability": "Каждую ночь выбирает игрока: если номинирует того и казнит, команда этого игрока проигрывает. Рассказчик объявит, если выбран новый игрок. ",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/fearmonger.png",
+    "flavor": "Остерегайся долго вглядываться в Бездну, иначе Бездна посмотрит в тебя.",
+    "firstNight": 38,
+    "firstNightReminder": "Запугиватель выбирает игрока. Объявите, что \"Запугиватель выбрал игрока.\"",
+    "otherNight": 26,
+    "otherNightReminder": "Запугиватель выбирает игрока. Если игрок ещё не был помечен как *СТРАХ*, объявите, что \"Запугиватель выбрал игрока.\""
+  },
+  "widow": {
+    "id": "widow",
+    "name": "Вдова",
+    "team": "minion",
+    "ability": "В первую ночь смотрит в Гримуар и выбирает игрока: тот отравлен. Один хороший игрок знает, что в игре есть Вдова.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/widow.png",
+    "flavor": "Ещё вина? Château d’Ergot ’07 — особый урожайный год. О да, весьма особенный.",
+    "firstNight": 28,
+    "firstNightReminder": "Покажите Гримуар столько, сколько нужно Вдове. Вдова выбирает игрока.",
+    "jinxes": [
+      {
+        "id": "magician",
+        "reason": "Вдова видит Гримуар без жетонов Демона и Фокусника."
+      },
+      {
+        "id": "alchemist",
+        "reason": "Алхимик-Вдова не имеет способности Вдовы. Вдова есть в игре. После каждой казни, Алхимик-Вдова может публично угадать настоящую Вдову. Если угадал, ночью она умирает от Демона, даже если тот не просыпался."
+      },
+      {
+        "id": "damsel",
+        "reason": "Если Вдова  есть (была) в игре, Дамочка  отравлена."
+      }
+    ]
+  },
+  "politician": {
+    "id": "politician",
+    "name": "Политик",
+    "team": "outsider",
+    "ability": "Если был главным виновником поражения своей команды, меняет сторону и выигрывает, даже если мертв.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/politician.png",
+    "flavor": "Рад, что вы задали этот вопрос. Честно, рад. Но настоящий вопрос тут..."
+  },
+  "golem": {
+    "id": "golem",
+    "name": "Голем",
+    "team": "outsider",
+    "ability": "Может номинировать только 1 раз за игру. Если номинированный игрок не Демон, тот умирает.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/golem.png",
+    "flavor": "Голем помочь? Голем крушить! Голем помочь."
+  },
+  "damsel": {
+    "id": "damsel",
+    "name": "Дамочка",
+    "team": "outsider",
+    "ability": "Приспешники знают, что Дамочка есть в игре. \nРаз за игру Приспешники могут публично угадать, кто Дамочка. Если угадали — её команда проигрывает.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/damsel.png",
+    "flavor": "Не трогай причёску, милый.",
+    "firstNight": 44,
+    "firstNightReminder": "Если Егерь выбрал её, покажи её новую роль",
+    "otherNight": 62,
+    "otherNightReminder": "Если Егерь выбрал её, покажи её новую роль",
+    "jinxes": [
+      {
+        "id": "widow",
+        "reason": "Если Вдова  есть (была) в игре, Дамочка  отравлена."
+      },
+      {
+        "id": "spy",
+        "reason": "Если Шпион  есть (был) в игре, Дамочка  отравлена."
+      },
+      {
+        "id": "pithug",
+        "reason": "Если Карга  создала Дамочку, Рассказчик выбирает, кто будет Дамочкой."
+      }
+    ]
+  },
+  "heretic": {
+    "id": "heretic",
+    "name": "Еретик",
+    "team": "outsider",
+    "ability": "Кто побеждает — проигрывает, а кто проигрывает — побеждает, даже если Еретик мертв.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/heretic.png",
+    "flavor": "После того как град разбил крышу и разнёс окна собора, он снова растворяется в земле, как умирающий ягнёнок под палящим солнцем пустыни. Такова притча безумца."
+  },
+  "puzzlemaster": {
+    "id": "puzzlemaster",
+    "name": "Загадочник",
+    "team": "outsider",
+    "ability": "1 игрок пьян, даже если Загадочник мёртв. Раз за игру может угадать, кто этот игрок. Если угадал — узнаёт, кто Демон. Если нет — ложный ответ.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/puzzlemaster.png",
+    "flavor": "Когда начинаешь думать, что нечто — это просто что-то другое, ты уже на грани ошибки. Терпение, терпение. Не путайте \"должно быть\" и \"есть\"."
+  },
+  "acrobat": {
+    "id": "acrobat",
+    "name": "Акробат",
+    "team": "townsfolk",
+    "ability": "Каждую ночь* выбирает игрока: если тот уже пьян или будет отравлен этой ночью, Акробат умирает.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/acrobat.png",
+    "flavor": "Добро пожаловать, дамы и господа, на величайшее шоу на Земле.",
+    "otherNight": 18,
+    "otherNightReminder": "Акробат выбирает игрока."
+  },
+  "snitch": {
+    "id": "snitch",
+    "name": "Стукач",
+    "team": "outsider",
+    "ability": "Каждый Приспешник получает 3 блефа.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/snitch.png",
+    "flavor": "Это был Джон.",
+    "firstNight": 15,
+    "firstNightReminder": "Покажите блефы Приспешникам"
+  },
+  "cannibal": {
+    "id": "cannibal",
+    "name": "Каннибал",
+    "team": "townsfolk",
+    "ability": "Получает способность последнего казнённого игрока. Если тот злой: Каннибал отравлен до следующей казни.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/cannibal.png",
+    "flavor": "Я не люблю клоунов. У них странный вкус.",
+    "otherNight": 1,
+    "otherNightReminder": "Разбуди Каннибала и разыграйте способность игрока УЖИН ",
+    "jinxes": [
+      {
+        "id": "zealot",
+        "reason": "Каннибал  узнаёт, что съел Фанатика."
+      },
+      {
+        "id": "juggler",
+        "reason": "Если Жонглёр  был казнён в первый день, Каннибал  узнаёт число вместо него."
+      },
+      {
+        "id": "butler",
+        "reason": "Каннибал  узнаёт, что съел Дворецкого."
+      },
+      {
+        "id": "princess",
+        "reason": "Если Каннибал номинировал, казнил и убил Принцессу сегодня, Демон не убивает этой ночью."
+      }
+    ]
+  },
+  "atheist": {
+    "id": "atheist",
+    "name": "Атеист",
+    "team": "townsfolk",
+    "ability": "Рассказчик может нарушать правила игры. Если Рассказчика казнят, добро побеждает, даже если Атеист мертв.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/atheist.png",
+    "flavor": "Давайте отбросим ненужные догадки и глупую паранойю. Для всего есть рациональное объяснение. Да, возможно, чайная чашка действительно вращается вокруг планеты, слишком маленькая, чтобы её увидеть, но я предпочту выпить свой чай из реального фарфора в моих реальных руках.",
+    "jinxes": [
+      {
+        "id": "riot",
+        "reason": "На третий день, если Рассказчика номинировали, идёт подсчет голосов. Если порог голосов достигнут, игра заканчивается. Если нет – Рассказчик номинирует дальше."
+      }
+    ]
+  },
+  "poppygrower": {
+    "id": "poppygrower",
+    "name": "Маковод",
+    "team": "townsfolk",
+    "ability": "Приспешники и Демоны не знают друг друга. Если умирает, они узнают друг друга той же ночью..",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/poppygrower.png",
+    "flavor": "В укромных рощах дремучего леса растёт чёрный мак. Один взгляд на его цветение — и ты зачарован. Один вдох его густого аромата — и ты потерян навсегда, став рабом богов света и тьмы.",
+    "firstNight": 11,
+    "firstNightReminder": "Приспешники и Демон не знакомятся",
+    "otherNight": 8,
+    "otherNightReminder": "Если Маковод умер сегодня, познакомьте Приспешников и Демона",
+    "jinxes": [
+      {
+        "id": "lilmonsta",
+        "reason": "Если Монстрёнок и Маковод живы, Миньоны просыпаются по одному, пока один из них не решил взять себе жетон демона."
+      }
+    ]
+  },
+  "choirboy": {
+    "id": "choirboy",
+    "name": "Служка",
+    "team": "townsfolk",
+    "ability": "Если Демон убивает Короля: узнаёт, кто является Демоном.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/choirboy.png",
+    "flavor": "Я видел, видел! Я был в церковных рядах, раскладывал псалмы, когда из органа зазвучала жуткая мелодия. Органист был в длинном плаще, с длинными пальцами на клавишах. И шляпа у него была… точь-в-точь как у тебя.",
+    "otherNight": 60,
+    "otherNightReminder": "Если Демон убил Короля, укажите на игрока, который является Демоном."
+  },
+  "magician": {
+    "id": "magician",
+    "name": "Фокусник",
+    "team": "townsfolk",
+    "ability": "Демон считает его Приспешником. Приспешники считают его Демоном.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/magician.png",
+    "flavor": "1... 2... Абра... 3... 4... Кадабра... *пшш!* И, как видите, дамы и господа, мешок золота капитана Фарнсворта исчез! Исчез! Без следа! Спасибо и спокойной ночи!",
+    "firstNight": 13,
+    "firstNightReminder": "Включите Фокусника в этапы информации для Миньонов и Демона.",
+    "jinxes": [
+      {
+        "id": "widow",
+        "reason": "Вдова видит Гримуар без жетонов Демона и Фокусника."
+      }
+    ]
+  },
+  "farmer": {
+    "id": "farmer",
+    "name": "Фермер",
+    "team": "townsfolk",
+    "ability": "Когда умирает ночью, один живой добрый игрок становится Фермером.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/farmer.png",
+    "flavor": "Даже самые знатные нуждаются в пище на столе. Без нас город умрёт с голоду.",
+    "otherNight": 64,
+    "otherNightReminder": "Если Фермер умер этой ночью, разбудите одного живого доброго игрока. Покажите ему жетон *ВЫ —* и жетон Фермера. Замените его предыдущий жетон на жетон Фермера."
+  },
+  "alchemist": {
+    "id": "alchemist",
+    "name": "Алхимик",
+    "team": "townsfolk",
+    "ability": "Имеет способность Приспешника. Когда использует её, Рассказчик может предложить ему сменить выбор.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/alchemist.png",
+    "flavor": "Изучи недра Земли. Исправляя ошибки, ты найдёшь скрытый камень. Над золотом лежит красное. Кетер в Малхут.",
+    "firstNight": 10,
+    "firstNightReminder": "Покажите жетон *ВЫ —* и жетон персонажа одного из Приспешников.",
+    "jinxes": [
+      {
+        "id": "summoner",
+        "reason": "Алхимик-Призыватель не получает блефы, и выбирает тип Демона, но не игрока. Если умер до того, как сделал выбор, зло побеждает."
+      },
+      {
+        "id": "widow",
+        "reason": "Алхимик-Вдова не имеет способности Вдовы. Вдова есть в игре. После каждой казни, Алхимик-Вдова может публично угадать настоящую Вдову. Если угадал, ночью она умирает от Демона, даже если тот не просыпался."
+      }
+    ]
+  },
+  "huntsman": {
+    "id": "huntsman",
+    "name": "Егерь",
+    "team": "townsfolk",
+    "ability": "Раз за игру ночью выбирает живого игрока: если это Дамочка, она становится Горожанином, которого нет в игре. [+Дамочка]",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/huntsman.png",
+    "flavor": "Моя хижина тёплая и крепкая. Топор у двери, сапоги сушатся у огня, тушится лосиное рагу… Тихо! Крик разносится по долине! Дождь, грязь и холодный ветер скрывают запах волков, но я знаю дорогу и держу шаг. Я иду.",
+    "firstNight": 43,
+    "firstNightReminder": "Может выбрать игрока. Если выбрана Дамочка, покажи ей её новую роль",
+    "otherNight": 61,
+    "otherNightReminder": "Может выбрать игрока. Если выбрана Дамочка, покажи ей её новую роль"
+  },
+  "fisherman": {
+    "id": "fisherman",
+    "name": "Рыбак",
+    "team": "townsfolk",
+    "ability": "Раз за игру днём приватно просит у Рассказчика совет, который поможет его команде победить.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/fisherman.png",
+    "flavor": "Это была моя любимая часть реки... Видите, как солнечный свет создаёт радугу от монастыря до рынка? Здесь водилась самая большая рыба. И чем старше я становлюсь, тем больше она была."
+  },
+  "nightwatchman": {
+    "id": "nightwatchman",
+    "name": "Фонарщик",
+    "team": "townsfolk",
+    "ability": "Один раз за игру, ночью, выбирает игрока: тот узнаёт Фонарщика.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/nightwatchman.png",
+    "flavor": "Ночь холодна и одинока, но у меня есть луна, звёзды, прохладный ветер и мягкий стук кожаных сапог по брусчатке. Вон там, за мутным окном, мерцает свет свечи...",
+    "firstNight": 64,
+    "firstNightReminder": "Фонарщик может выбрать игрока. Усыпите Фонарщика. Разбудите цель, покажите жетоны *ЭТОТ ИГРОК —* и Ночного стража, затем укажите на Ночного стража.",
+    "otherNight": 82,
+    "otherNightReminder": "Фонарщик может выбрать игрока. Усыпите Фонарщика. Разбудите цель, покажите жетоны *ЭТОТ ИГРОК —* и Ночного стража, затем укажите на Ночного стража."
+  },
+  "amnesiac": {
+    "id": "amnesiac",
+    "name": "Амнезиак",
+    "team": "townsfolk",
+    "ability": "Не знает, какая у него способность. Каждый день может предположить её приватно и узнать, насколько точно угадал.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/amnesiac.png",
+    "flavor": "Подождите. Что? Кто? А, окей. Подождите. Что?",
+    "firstNight": 45,
+    "firstNightReminder": "Активируйте способность Амнезиака, если это применимо.",
+    "otherNight": 63,
+    "otherNightReminder": "Активируйте способность Амнезиака, если это применимо."
+  },
+  "lycanthrope": {
+    "id": "lycanthrope",
+    "name": "Ликантроп",
+    "team": "townsfolk",
+    "ability": "Каждую ночь* выбирает живого игрока. Если тот добрый, он умирает, и Демон этой ночью не убивает.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/lycanthrope.png",
+    "flavor": "Под тонкой оболочкой цивилизации скрывается воющий ужас.",
+    "otherNight": 33,
+    "otherNightReminder": "Выбирает игрока. Если он добрый, отметь его УБИТ"
+  },
+  "cultleader": {
+    "id": "cultleader",
+    "name": "Лидер культа",
+    "team": "townsfolk",
+    "ability": "Каждую ночь принимает сторону одного из живых соседей. Если все добрые игроки решат присоединиться к его культу, команда Лидера культа побеждает.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/cultleader.png",
+    "flavor": "Считая себя мудрыми, они стали глупцами.",
+    "firstNight": 65,
+    "firstNightReminder": "Лидер культа может сменить сторону. Если так, покажите жетон *ВЫ —* и большой палец вверх или вниз в зависимости от его новой стороны.",
+    "otherNight": 83,
+    "otherNightReminder": "Лидер культа может сменить сторону. Если так, покажите жетон *ВЫ —* и большой палец вверх или вниз в зависимости от его новой стороны."
+  },
+  "balloonist": {
+    "id": "balloonist",
+    "name": "Аэронавт",
+    "team": "townsfolk",
+    "ability": "Каждую ночь узнаёт игрока с типом персонажа, отличным от предыдущей ночи.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/balloonist.png",
+    "flavor": "Больше жара! Выше! Выше! Più alto! Ах... так красиво отсюда, согласны? Видите детей, ловящих рыбу у реки, под ивой? Видите отблеск солнца на куполах цирка? Что это? Старик, одинокий, без сознания в винограднике? Меньше жара! Ниже! Ниже! Vai più in basso!",
+    "firstNight": 60,
+    "firstNightReminder": "Покажите любого игрока.",
+    "otherNight": 78,
+    "otherNightReminder": "Покажите игрока с другим типом персонажа, чем в предыдущую ночь."
+  },
+  "king": {
+    "id": "king",
+    "name": "Король",
+    "team": "townsfolk",
+    "ability": "Каждую ночь, если мёртвых большинство, узнаёт 1 живую роль. Демон знает, кто Король.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/king.png",
+    "flavor": "Между неизведанными муками смертной борьбы / И мрачной ночью, сладкой таинственностью и скорбью / Лежат несвязанные радости долгой и разноцветной судьбы, / Чей сад цветёт каждым нарисованным Лицом.",
+    "firstNight": 19,
+    "firstNightReminder": "Разбудите Демона. Покажите жетон *ЭТОТ ИГРОК —* и жетон Короля, затем укажите на Короля.",
+    "otherNight": 80,
+    "otherNightReminder": "Если мёртвых столько же или больше, чем живых, покажите жетон персонажа одного живого игрока."
+  },
+  "preacher": {
+    "id": "preacher",
+    "name": "Проповедник",
+    "team": "townsfolk",
+    "ability": "Каждую ночь выбирает игрока: если это Приспешник, тот узнаёт, что его выбрали, и теряет свою способность.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/preacher.png",
+    "flavor": "Лучше быть богатым и здоровым, чем бедным и больным.",
+    "firstNight": 23,
+    "firstNightReminder": "Выбирает игрока. Если это Приспешник: отметь его НЕТ СПОСОБНОСТИ, покажите жетон Проповедника",
+    "otherNight": 11,
+    "otherNightReminder": "Выбирает игрока. Если это Приспешник: отметь его НЕТ СПОСОБНОСТИ, покажите жетон Проповедника"
+  },
+  "general": {
+    "id": "general",
+    "name": "Генерал",
+    "team": "townsfolk",
+    "ability": "Каждую ночь узнаёт, кто, по мнению Рассказчика, ближе к победе: добро, зло или ничья.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/general.png",
+    "flavor": "У меня нет времени на цитаты.",
+    "firstNight": 69,
+    "firstNightReminder": "Покажите сигнал большим пальцем",
+    "otherNight": 87,
+    "otherNightReminder": "Покажите сигнал большим пальцем"
+  },
+  "pixie": {
+    "id": "pixie",
+    "name": "Фея",
+    "team": "townsfolk",
+    "ability": "В первую ночь узнаёт роль Горожанина в игре. Если помешана, что она — этот Горожанин, после его смерти получит его способность.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/pixie.png",
+    "flavor": "Друг за другом по траве,\nДевки бегают везде.\nМальчик лезет на сучок.\nКем же станешь ты, дружок?\nДамы — в город, напоказ.\nЛорды валят лес подчас.\nЧто твоё — всё у меня,\nГлупая, глупая Фея — я…",
+    "firstNight": 42,
+    "firstNightReminder": "Покажи роль игрока: ПОМЕШАН "
+  },
+  "bountyhunter": {
+    "id": "bountyhunter",
+    "name": "Наёмник",
+    "team": "townsfolk",
+    "ability": "В первую ночь узнаёт 1 злого игрока. Если тот умирает, этой ночью узнаёт ещё 1 злого игрока.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/bountyhunter.png",
+    "flavor": "Я одинокий охотник в этом городе, пропитанном зловонием коррупции. Оно проникает в ноздри, обжигая омерзением. И предвкушением. Болезнь этого проклятого места распространяется с каждой ночью. А я... Я — лекарство.",
+    "firstNight": 63,
+    "firstNightReminder": "Покажите игрока: ЗНАЕТ ",
+    "otherNight": 81,
+    "otherNightReminder": "Если игрок ЗНАЕТ умер, отметь другого злого игрока ЗНАЕТ, покажи его",
+    "jinxes": [
+      {
+        "id": "philosopher",
+        "reason": "Если Философ получил способность Наёмника, может появиться злой Горожанин."
+      },
+      {
+        "id": "kazali",
+        "reason": "Если Казали превратил Наёмника в Миньона, злой Горожанин не создаётся."
+      }
+    ]
+  },
+  "noble": {
+    "id": "noble",
+    "name": "Дворянин",
+    "team": "townsfolk",
+    "ability": "В первую ночь узнаёт 3 игроков, ровно 1 из них злой.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/noble.png",
+    "flavor": "Сарказм — это низшая форма остроумия. Но, отвечая на вашу критику, сэр, — это, тем не менее, форма остроумия.",
+    "firstNight": 59,
+    "firstNightReminder": "Покажи 3 игроков: ЗНАЕТ "
+  },
+  "harlot": {
+    "id": "harlot",
+    "name": "Куртизанка",
+    "team": "traveller",
+    "ability": "Каждую ночь* выбирает живого игрока: если тот согласен, узнаёт его роль, но оба могут умереть.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/harlot.png",
+    "flavor": "Аншанте, моряк. Выглядите так, будто вам нужен человек, который действительно выслушает ваши тревоги. Я отличный слушатель. Очень, очень хороший.",
+    "otherNight": 5,
+    "otherNightReminder": "Куртизанка указывает на любого живого игрока. Затем усыпите Куртизанку. Разбудите выбранного игрока, покажите ему жетон *Этот персонаж выбрал вас*, затем жетон Куртизанки. Игрок кивает *да* или качает головой *нет*. Если он кивнул *да*, разбудите Куртизанку и покажите ей жетон персонажа выбранного игрока. Затем вы можете решить, что оба игрока умрут."
+  },
+  "vortox": {
+    "id": "vortox",
+    "name": "Вихрь",
+    "team": "demon",
+    "ability": "Каждую ночь* выбирает игрока: тот умирает. Горожане получают ложную информацию. Если днём не было казни, зло побеждает.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/vortox.png",
+    "flavor": "Чёрное — это белое. Правое — это левое. Верх — это длинное. Низ — это зрение. Короткое — это слепота. Следуй за мной. Ответы найдутся.",
+    "otherNight": 42,
+    "otherNightReminder": "Выбирает игрока. Отметь его УБИТ"
+  },
+  "nodashii": {
+    "id": "nodashii",
+    "name": "Но Даши",
+    "team": "demon",
+    "ability": "Каждую ночь* выбирает игрока: тот умирает. Травит 2 ближайших соседних Горожан, даже если те мертвы.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/nodashii.png",
+    "flavor": "Грехи Арнока, я ощущаю твой гнилой смрад. Проклятое солнце и её мерзкие легионы крохотных улыбающихся богов — я развращаю тебя. Благословенная ночь и скрытые глубины отвратительного нечестивого моря — я завершаю твою убогую жизнь на этом плане.",
+    "otherNight": 41,
+    "otherNightReminder": "Выбирает игрока. Отметь его УБИТ"
+  },
+  "vigormortis": {
+    "id": "vigormortis",
+    "name": "Вигормортис",
+    "team": "demon",
+    "ability": "Каждую ночь* выбирает игрока: тот умирает. Убитые им Приспешники сохраняют способность и травят 1 соседнего Горожанина.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/vigormortis.png",
+    "flavor": "Все двери — это одна дверь. Все ключи — это один ключ. Все чаши — это одна чаша, но кто выпьет из воды, что я даю, никогда не будет жаждать, ибо вода станет в нём источником, бьющим в жизнь вечную.",
+    "otherNight": 44,
+    "otherNightReminder": "Выбирает игрока. Если выбран Приспешники, отравите соседнего Горожане"
+  },
+  "fanggu": {
+    "id": "fanggu",
+    "name": "Фан Гу",
+    "team": "demon",
+    "ability": "Каждую ночь* выбирает игрока: тот умирает. Первый убитый так Изгой становится злым Фан Гу, старый Фан Гу умирает вместо него.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/fanggu.png",
+    "flavor": "Ваши стены и оружие – лишь дым во снах.",
+    "otherNight": 40,
+    "otherNightReminder": "Выбирает игрока. Если выбран Изгои  (только один раз): замени жетон Изгои на запасной жетон Фан Гу. Разбуди игрока. Покажи карточку ТЕПЕРЬ ТЫ и роль Фан Гу. Покажи большой палец вниз"
+  },
+  "pithug": {
+    "id": "pithug",
+    "name": "Карга",
+    "team": "minion",
+    "ability": "Каждую ночь* выбирает игрока и роль: если роли нет в игре, тот становится этой ролью. Если создала Демона, смерти этой ночью происходят на усмотрение Рассказчика.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/pithug.png",
+    "flavor": "Кружись, зелье, в котле кипучем; Внутренности ядовитые брось; Жаба, что в холодном камне спала; Тридцать и один день и ночь миновала; Пот ядовитый, что в ней застыл; В первую очередь вари в чарующем котле.",
+    "otherNight": 25,
+    "otherNightReminder": "Выбирает игрока и роль. Если роли нет в игре: Разбуди игрока. Покажи карточку ТЕПЕРЬ ВЫ и роль",
+    "jinxes": [
+      {
+        "id": "damsel",
+        "reason": "Если Карга  создала Дамочку, Рассказчик выбирает, кто будет Дамочкой."
+      },
+      {
+        "id": "goon",
+        "reason": "Злой игрок, превращённый Каргой в Громилу, не может стать добрым."
+      }
+    ]
+  },
+  "cerenovus": {
+    "id": "cerenovus",
+    "name": "Цереновус",
+    "team": "minion",
+    "ability": "Каждую ночь выбирает игрока и добрую роль: завтра тот должен быть помешан, что он — эта роль, иначе Рассказчик может его казнить.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/cerenovus.png",
+    "flavor": "Реальность - это всего лишь мнение. В частности, моё мнение.",
+    "firstNight": 37,
+    "firstNightReminder": "Выбирает игрока и роль. Разбуди этого игрока. Покажи карточку ЭТОТ ПЕРСОНАЖ ВЫБРАЛ ВАС, жетон Цереновус и роль",
+    "otherNight": 24,
+    "otherNightReminder": "Выбирает игрока и роль. Разбуди этого игрока. Покажи карточку ЭТОТ ПЕРСОНАЖ ВЫБРАЛ ВАС, жетон Цереновус и роль"
+  },
+  "witch": {
+    "id": "witch",
+    "name": "Ведьма",
+    "team": "minion",
+    "ability": "Каждую ночь выбирает игрока: если тот завтра номинирует, он умрёт. При 3 живых игроках теряет эту способность.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/witch.png",
+    "flavor": "Три капли козьей крови. Прядь волос, вырванная в гневе. Имя произнесено, тень отбрасывается. Иди по тернистой тропе с левой ноги и не оглядывайся.",
+    "firstNight": 36,
+    "firstNightReminder": "Выбирает игрока. Отметь его ПРОКЛЯТ ",
+    "otherNight": 23,
+    "otherNightReminder": "Выбирает игрока. Отметь его ПРОКЛЯТ "
+  },
+  "eviltwin": {
+    "id": "eviltwin",
+    "name": "Злой Близнец",
+    "team": "minion",
+    "ability": "Он и добрый игрок знают друг друга. Если доброго казнят, зло побеждает. Добро не может победить, пока оба живы.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/eviltwin.png",
+    "flavor": "Я не Сара! Я Клара! ЭТО ОНА - Сара! Сара - злая! Не я!",
+    "firstNight": 35,
+    "firstNightReminder": "Разбуди обоих близнецов. Укажи им друг на друга. Покажи доброму близнецу жетон Злой Близнец, и наоборот"
+  },
+  "klutz": {
+    "id": "klutz",
+    "name": "Растяпа",
+    "team": "outsider",
+    "ability": "Когда умирает, публично выбирает живого игрока: если тот злой, команда Растяпы проигрывает.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/klutz.png",
+    "flavor": "Ой."
+  },
+  "barber": {
+    "id": "barber",
+    "name": "Цирюльник",
+    "team": "outsider",
+    "ability": "Если умер, Демон этой ночью может поменять ролями 2 игроков (не другого Демона).",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/barber.png",
+    "flavor": "Знали ли вы, что когда-то парикмахерское дело и хирургия были одной профессией? Нет? Ну вот теперь знаете.",
+    "otherNight": 55,
+    "otherNightReminder": "Если СТРИЖКА СЕГОДНЯ, Демон может поменять ролями 2 игроков"
+  },
+  "sweetheart": {
+    "id": "sweetheart",
+    "name": "Милашка",
+    "team": "outsider",
+    "ability": "Когда умирает, 1 игрок становится пьян.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/sweetheart.png",
+    "flavor": "Я никогда её не забуду. Никогда.",
+    "otherNight": 56,
+    "otherNightReminder": "Если умерла, отметь 1 игрока ПЬЯН "
+  },
+  "mutant": {
+    "id": "mutant",
+    "name": "Уродец",
+    "team": "outsider",
+    "ability": "Если помешан, что он Изгой: Рассказчик может его казнить.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/mutant.png",
+    "flavor": "Я не урод! Я человек! Смилуйтесь!"
+  },
+  "sage": {
+    "id": "sage",
+    "name": "Мудрец",
+    "team": "townsfolk",
+    "ability": "Если был убит Демоном: узнаёт 2 игроков, один из них — Демон.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/sage.png",
+    "flavor": "Эти горы книг хранят тайну, я уверен! Между слов лежит истина. Больше свечей, мальчик! Больше чернил! Эти записи могут выглядеть как бред, но адская загадка раскрывается.",
+    "otherNight": 57,
+    "otherNightReminder": "Если убит Демоном, разбуди и покажи 2 игроков, один из них — Демон"
+  },
+  "juggler": {
+    "id": "juggler",
+    "name": "Жонглёр",
+    "team": "townsfolk",
+    "ability": "В первый день публично называет до 5 игроков и их роли. Ночью узнаёт, скольких из них угадал.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/juggler.png",
+    "flavor": "Для следующего трюка мне понадобятся: цветок, мешочек фасоли, игрушечная змея, кисточка и бензиновый кусторез. Предупреждаю, этот трюк может стать последним. Ой-ой.",
+    "otherNight": 77,
+    "otherNightReminder": "Покажи число",
+    "jinxes": [
+      {
+        "id": "cannibal",
+        "reason": "Если Жонглёр  был казнён в первый день, Каннибал  узнаёт число вместо него."
+      }
+    ]
+  },
+  "artist": {
+    "id": "artist",
+    "name": "Художник",
+    "team": "townsfolk",
+    "ability": "Раз за игру днём приватно задаёт Рассказчику вопрос с ответом \"да\" или \"нет\".",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/artist.png",
+    "flavor": "О, Боже! Это же свет! Моё творение... как сказать... Великолепно! Бог явлен! Да!"
+  },
+  "philosopher": {
+    "id": "philosopher",
+    "name": "Философ",
+    "team": "townsfolk",
+    "ability": "Раз за игру ночью выбирает добрую роль: получает её способность. Если роль уже в игре, она пьяна.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/philosopher.png",
+    "flavor": "Если что-то и реально, то это пиво. Пей, ибо завтра мы можем умереть.",
+    "firstNight": 9,
+    "firstNightReminder": "Может выбрать роль. Замени его жетон",
+    "otherNight": 7,
+    "otherNightReminder": "Может выбрать роль. Замените его жетон",
+    "jinxes": [
+      {
+        "id": "bountyhunter",
+        "reason": "Если Философ получил способность Наёмника, может появиться злой Горожанин."
+      }
+    ]
+  },
+  "seamstress": {
+    "id": "seamstress",
+    "name": "Швея",
+    "team": "townsfolk",
+    "ability": "Раз за игру ночью выбирает 2 игроков (не себя): узнаёт, в одной ли они команде.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/seamstress.png",
+    "flavor": "Слышали, тот незнакомец в кашемировом пальто бросил словечко за нашу юную Белль? И она согласилась? Ох, но это ничто по сравнению с тем, что вытворяли Гарри и тот жонглёр на ярмарке! Только бы мне язык за зубами держать… о да.",
+    "firstNight": 56,
+    "firstNightReminder": "Может выбрать 2 игроков. Покажи ДА или НЕТ",
+    "otherNight": 76,
+    "otherNightReminder": "Может выбрать 2 игроков. Покажи ДА или НЕТ"
+  },
+  "savant": {
+    "id": "savant",
+    "name": "Савант",
+    "team": "townsfolk",
+    "ability": "Каждый день приватно узнаёт у Рассказчика 2 факта: 1 правда и 1 ложь.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/savant.png",
+    "flavor": "Семьдесят две спички на полу... солнце садится рано, но луна неизменна... порванный кусок ткани... зло в особняке... три на три... тот, кому мы доверяли, не тот, кем кажется... зелёный свет означает магний... остатки, но узор неправильный... Семьдесят две спички на полу..."
+  },
+  "oracle": {
+    "id": "oracle",
+    "name": "Оракул",
+    "team": "townsfolk",
+    "ability": "Каждую ночь* узнаёт, сколько мёртвых игроков злые.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/oracle.png",
+    "flavor": "Только избранные могут заглянуть за завесу. Мёртвые беспокойны и молча указывают на ледяной север.",
+    "otherNight": 75,
+    "otherNightReminder": "Покажи число"
+  },
+  "towncrier": {
+    "id": "towncrier",
+    "name": "Глашатай",
+    "team": "townsfolk",
+    "ability": "Каждую ночь* узнаёт, номинировал ли сегодня Приспешник.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/towncrier.png",
+    "flavor": "Слушайте! Слушайте! Колдовство в лабиринте! Гениальный провидец раскрыл всё! Город в опасности! Слушайте!",
+    "otherNight": 74,
+    "otherNightReminder": "Покажи ДА или НЕТ"
+  },
+  "flowergirl": {
+    "id": "flowergirl",
+    "name": "Цветочница",
+    "team": "townsfolk",
+    "ability": "Каждую ночь* узнаёт, голосовал ли сегодня Демон.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/flowergirl.png",
+    "flavor": "Вчерашние фиалки увяли и умерли, но сегодня мои маки расцвели.",
+    "otherNight": 73,
+    "otherNightReminder": "Покажи ДА или НЕТ"
+  },
+  "mathematician": {
+    "id": "mathematician",
+    "name": "Математик",
+    "team": "townsfolk",
+    "ability": "Каждую ночь узнаёт, сколько способностей сработали неправильно (с рассвета) из‑за способностей других персонажей.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/mathematician.png",
+    "flavor": "Любая непротиворечивая формальная система x, в рамках которой можно провести элементарную арифметику, является неполной; другими словами, в языке x существуют утверждения, которые нельзя ни доказать, ни опровергнуть. Следовательно, вы пьяны.",
+    "firstNight": 71,
+    "firstNightReminder": "Покажи число",
+    "otherNight": 89,
+    "otherNightReminder": "Покажи число",
+    "jinxes": [
+      {
+        "id": "drunk",
+        "reason": "Математик может узнать, что способность Пьяницы сработала неправильно."
+      },
+      {
+        "id": "marionette",
+        "reason": "Математик может узнать, что способность Марионетки сработала неправильно."
+      },
+      {
+        "id": "chambermaid",
+        "reason": "Горничная узнает, что Математик просыпался ночью."
+      },
+      {
+        "id": "lunatic",
+        "reason": "Математик может узнать, что Демон и Лунатик выбрали разные цели."
+      }
+    ]
+  },
+  "snakecharmer": {
+    "id": "snakecharmer",
+    "name": "Заклинатель Змей",
+    "team": "townsfolk",
+    "ability": "Каждую ночь выбирает живого игрока: если это Демон — меняется с ним ролями и командами, затем отравляет его.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/snakecharmer.png",
+    "flavor": "Эффенди... Я всего лишь скромный человек, но моя флейта золотая, и одна её мелодия укротит самого дикого джинна, Иншаллах. Говорят, что жадность губит больше людей, чем верёвка. Но не меня, Эффенди... не меня.",
+    "firstNight": 31,
+    "firstNightReminder": "Выбирает игрока. Если выбрал Демона: покажи карточку ТЕПЕРЬ ТЫ и роль ДЕМОН. Покажи большой палец вниз. Поменяй жетоны Заклинатель Змей  и ДЕМОН местами. Разбуди бывшего Демона. Покажи карточку ТЕПЕРЬ ТЫ и Заклинатель Змей. Покажи большой палец вверх",
+    "otherNight": 19,
+    "otherNightReminder": "Выбирает игрока. Если выбрал Демона: покажи карточку ТЕПЕРЬ ТЫ и роль ДЕМОН. Покажи большой палец вниз. Поменяй жетоны Заклинатель Змей  и ДЕМОН местами. Разбуди бывшего Демона. Покажи карточку ТЕПЕРЬ ТЫ и Заклинатель Змей. Покажи большой палец вверх"
+  },
+  "dreamer": {
+    "id": "dreamer",
+    "name": "Сновидец",
+    "team": "townsfolk",
+    "ability": "Каждую ночь выбирает игрока (не себя, не Странника), узнаёт 2 его роли: добрую и злую, одна из них верна.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/dreamer.png",
+    "flavor": "Я помню Часовщика. Небо было красным, и дождь шёл из фрактальных треугольников. Пахло фиалками, слышалось журчание. Женщина со светящимися глазами и растрёпанной бородой шипела на небо. А потом я проснулся.",
+    "firstNight": 55,
+    "firstNightReminder": "Выбирает игрока. Покажи 2 роли: добрую и злую",
+    "otherNight": 72,
+    "otherNightReminder": "Выбирает игрока. Покажи 2 роли: добрую и злую"
+  },
+  "clockmaker": {
+    "id": "clockmaker",
+    "name": "Часовщик",
+    "team": "townsfolk",
+    "ability": "В первую ночь узнаёт число шагов от Демона до ближайшего к нему Приспешника.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/clockmaker.png",
+    "flavor": "Не мешайте мне. Тиканье должно продолжаться, ведь круг — это символ жизни, содержащий всё — все ответы в своём божественном механизме. Я должен работать.",
+    "firstNight": 54,
+    "firstNightReminder": "Покажи число",
+    "jinxes": [
+      {
+        "id": "summoner",
+        "reason": "Призыватель считается Демоном для Часовщика."
+      }
+    ]
+  },
+  "judge": {
+    "id": "judge",
+    "name": "Судья",
+    "team": "traveller",
+    "ability": "Раз за игру, если номинирован другой игрок: может принудительно казнить или помиловать его.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/judge.png",
+    "flavor": "Я признаю подсудимого виновным в преступлениях: убийство, мошенничество, поджог, кража, выдача себя за офицера закона, врачебная практика без лицензии, клевета, цареубийство и мусор на улице."
+  },
+  "po": {
+    "id": "po",
+    "name": "По",
+    "team": "demon",
+    "ability": "Каждую ночь* может выбрать игрока: тот умирает. Если вчера отказался выбирать: выбирает 3 игроков.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/po.png",
+    "flavor": "Хотите цветок? Мне так одиноко.",
+    "otherNight": 39,
+    "otherNightReminder": "Может выбрать игрока(ов). Отметь их УБИТ"
+  },
+  "shabaloth": {
+    "id": "shabaloth",
+    "name": "Шабалот",
+    "team": "demon",
+    "ability": "Каждую ночь* выбирает 2 игроков: те умирают. Мёртвый игрок, выбранный прошлой ночью, может воскреснуть.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/shabaloth.png",
+    "flavor": "Бларг ф'тааг нм матан! Но шо гумла м'сик на юуу. Флуууууууург х-сикккх.",
+    "otherNight": 38,
+    "otherNightReminder": "Ранее выбранный игрок может воскреснуть. Выбирает 2 игроков"
+  },
+  "pukka": {
+    "id": "pukka",
+    "name": "Пукка",
+    "team": "demon",
+    "ability": "Каждую ночь выбирает игрока: тот отравлен. Ранее отравленный игрок умирает и более не отравлен.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/pukka.png",
+    "flavor": "Вы были так добры, приняв меня в свой прекрасный дом. Мне ужасно жаль, что я случайно вас поцарапал. Такая мелочь. Неважно. Но прошу, примите эту золотую зубочистку в знак моего сожаления.",
+    "firstNight": 41,
+    "firstNightReminder": "Выбирает игрока. Отметь его ОТРАВЛЕН",
+    "otherNight": 37,
+    "otherNightReminder": "Выбирает игрока, отметь его ОТРАВЛЕН. Ранее отравленный игрок умирает и становится здоровым"
+  },
+  "zombuul": {
+    "id": "zombuul",
+    "name": "Зомбул",
+    "team": "demon",
+    "ability": "Каждую ночь*, если днём никто не умер, выбирает игрока: тот умирает. Умерев первый раз остаётся жив, но для всех считается мёртвым.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/zombuul.png",
+    "flavor": "Я не. Понимаю. Ваших обычаев. Человек. Покажи мне. Землю. Где святые. Лежат. Спят. Я тоже. Должен спать. Скоро.",
+    "otherNight": 36,
+    "otherNightReminder": "Если сегодня никто не умер, выбирает игрока. Отметь его УБИТ",
+    "jinxes": [
+      {
+        "id": "summoner",
+        "reason": "Если Призыватель призвал мёртвого игрока как Зомбула, его способность “умерев первый раз…” считается потраченой."
+      }
+    ]
+  },
+  "mastermind": {
+    "id": "mastermind",
+    "name": "Манипулятор",
+    "team": "minion",
+    "ability": "Если Демон умер от казни (и партия должна закончиться), игра идёт ещё 1 день. Если в тот день состоится казнь, команда казнённого проигрывает. ",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/mastermind.png",
+    "flavor": "Щупальца этого монстра прибиты к дверям церкви. Матери и дети танцуют на улице. Отлично. Всё идёт точно по моему плану."
+  },
+  "assassin": {
+    "id": "assassin",
+    "name": "Ассасин",
+    "team": "minion",
+    "ability": "Раз за игру ночью* выбирает игрока: тот умирает, даже если по какой‑то причине не должен.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/assassin.png",
+    "flavor": "...",
+    "otherNight": 51,
+    "otherNightReminder": "Может выбрать игрока. Отметь его УБИТ"
+  },
+  "devilsadvocate": {
+    "id": "devilsadvocate",
+    "name": "Адвокат дьявола",
+    "team": "minion",
+    "ability": "Каждую ночь выбирает живого игрока (другого, чем прошлой ночью): если того казнят завтра, он не умрёт.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/devilsadvocate.png",
+    "flavor": "Мой клиент, если протест будет отклонён, заявляет о своей невиновности на основании нарушения стороной обвинения статьи 27.B — некорректного или вводящего в заблуждение спряжения глагола. Тот факт, что прошлой ночью умерли девять присяжных, является лишь prima facie, что, как установил прецедент Wills vs Thule, даёт ещё одну причину для оправдания.",
+    "firstNight": 34,
+    "firstNightReminder": "Выбирает живого игрока. Отметь его ЗАЩИЩËН",
+    "otherNight": 22,
+    "otherNightReminder": "Выбирает живого игрока. Отметь его ЗАЩИЩËН"
+  },
+  "godfather": {
+    "id": "godfather",
+    "name": "Крёстный отец",
+    "team": "minion",
+    "ability": "В первую ночь узнаёт роли Изгоев в игре. Если Изгой умер днём, этой ночью выбирает игрока: он умирает.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/godfather.png",
+    "flavor": "Обычно — это просто бизнес. Но когда ты оскорбляешь мою дочь, ты оскорбляешь меня. А когда ты оскорбляешь меня, ты оскорбляешь всю мою семью. Тебе стоит быть осторожнее — было бы жаль, если бы с тобой произошёл несчастный случай.",
+    "firstNight": 32,
+    "firstNightReminder": "Покажи жетоны всех Изгоев в игре",
+    "otherNight": 52,
+    "otherNightReminder": "Если Изгой умер сегодня, выбирает игрока. Отметь его УБИТ"
+  },
+  "lunatic": {
+    "id": "lunatic",
+    "name": "Лунатик",
+    "team": "outsider",
+    "ability": "Думает, что он Демон, но это не так. Демон знает Лунатика и кого тот выбрал ночью.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/lunatic.png",
+    "flavor": "Я — сама ночь... наверное.",
+    "firstNight": 16,
+    "firstNightReminder": "Если 7+ игроков: покажи Приспешников и 3 блефа",
+    "otherNight": 31,
+    "otherNightReminder": "Выбирает игрока(ов). Отметь их ВЫБРАН ",
+    "jinxes": [
+      {
+        "id": "mathematician",
+        "reason": "Математик может узнать, что Демон и Лунатик выбрали разные цели."
+      }
+    ]
+  },
+  "goon": {
+    "id": "goon",
+    "name": "Громила",
+    "team": "outsider",
+    "ability": "Каждую ночь первый игрок, который выбрал его своей способностью, пьян до заката. Громила переходит в его команду.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/goon.png",
+    "flavor": "Да, босс. Я всё ему объяснил, доходчиво. Он точно не захочет, чтобы я объяснял ещё раз. Нет, босс, врач не нужен — всего лишь ножевое ранение. К утру заживёт.",
+    "jinxes": [
+      {
+        "id": "pithug",
+        "reason": "Злой игрок, превращённый Каргой в Громилу, не может стать добрым."
+      },
+      {
+        "id": "boffin",
+        "reason": "Демон со способностью Громилы не может стать добрым."
+      }
+    ]
+  },
+  "moonchild": {
+    "id": "moonchild",
+    "name": "Дитя луны",
+    "team": "outsider",
+    "ability": "Когда узнаёт, что умер, публично выбирает живого игрока. Если тот добрый, этой ночью он умрёт.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/moonchild.png",
+    "flavor": "Скорпион взирает на влюблённых, и тебе предстоит сделать выбор. С серебряным крестом на моей ладони твоя судьба станет ясна. Но со сталью у моего горла, видят звёзды, ты пожалеешь об этом.",
+    "otherNight": 66,
+    "otherNightReminder": "Если выбрал доброго игрока, он умирает"
+  },
+  "tinker": {
+    "id": "tinker",
+    "name": "Механик",
+    "team": "outsider",
+    "ability": "Может умереть в любой момент.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/tinker.png",
+    "flavor": "Кажется, я понял, в чём проблема. К счастью, у меня есть идея! Эта катапульта будет стрелять вдвое дальше, если её слегка доработать...",
+    "otherNight": 65,
+    "otherNightReminder": "Может умереть"
+  },
+  "fool": {
+    "id": "fool",
+    "name": "Шут",
+    "team": "townsfolk",
+    "ability": "Когда умирает впервые,\nне умирает.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/fool.png",
+    "flavor": "...и Король сказал: 'Что?! У меня никогда не было резиновых панталон, не говоря уже о заварной пушке!' Хо-хо! Весёлый день!"
+  },
+  "pacifist": {
+    "id": "pacifist",
+    "name": "Пацифист",
+    "team": "townsfolk",
+    "ability": "Казнённые добрые игроки могут не умереть.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/pacifist.png",
+    "flavor": "Не доверяйте тем, кто испытывает сильное желание наказывать."
+  },
+  "tealady": {
+    "id": "tealady",
+    "name": "Чаёвница",
+    "team": "townsfolk",
+    "ability": "Если оба живых соседа добрые,\nони не могут умереть.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/tealady.png",
+    "flavor": "Если вам холодно, чай согреет вас. Если вам жарко, чай охладит вас. Если вам грустно, чай поднимет вам настроение. Если вы взволнованы, чай успокоит вас."
+  },
+  "minstrel": {
+    "id": "minstrel",
+    "name": "Менестрель",
+    "team": "townsfolk",
+    "ability": "Когда Миньон умирает от казни, другие игроки (кроме Странников) пьяны до заката.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/minstrel.png",
+    "flavor": "И я услышу твои шаги над собой… И мои сны станут теплее и слаще… Если ты не забудешь сказать мне, что любишь меня… Я буду спать в покое, пока ты не придёшь ко мне.",
+    "otherNight": 1
+  },
+  "professor": {
+    "id": "professor",
+    "name": "Профессор",
+    "team": "townsfolk",
+    "ability": "Раз за игру ночью* выбирает мёртвого игрока: если тот Горожанин, он воскресает.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/professor.png",
+    "flavor": "Процесс прост. Подключите гидравлический конфабулятор к модифицированному амплифайеру чиматрицы, добавьте 20 мл псевдодорофина, держите его Z-уровни выше 20%, и ваш муж будет в порядке. Теперь осталось дождаться удара молнии.",
+    "otherNight": 59,
+    "otherNightReminder": "Может выбрать мёртвого игрока. Он воскресает"
+  },
+  "courtier": {
+    "id": "courtier",
+    "name": "Придворный",
+    "team": "townsfolk",
+    "ability": "Раз за игру ночью выбирает роль: она пьяна на 3 ночи и 3 дня.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/courtier.png",
+    "flavor": "Я больше боюсь армии из ста овец под предводительством льва, чем армии из ста львов, ведомых овцой.",
+    "firstNight": 29,
+    "firstNightReminder": "Может выбрать роль. Отметь её ПЬЯН",
+    "otherNight": 14,
+    "otherNightReminder": "Может выбрать персонажа. Отметь его ПЬЯН"
+  },
+  "gossip": {
+    "id": "gossip",
+    "name": "Сплетница",
+    "team": "townsfolk",
+    "ability": "Каждый день может сделать публичное заявление. Если это правда, этой ночью 1 игрок умрёт.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/gossip.png",
+    "flavor": "Бла-бла-бла, бла-бла-бла-бла-бла-бла, бла-бла-бла-бла-бла-бла. Бла.",
+    "otherNight": 53,
+    "otherNightReminder": "Если сплетня была правдивой, 1 игрок умирает"
+  },
+  "gambler": {
+    "id": "gambler",
+    "name": "Игрок",
+    "team": "townsfolk",
+    "ability": "Каждую ночь* называет игрока и его роль: если ошибается, умирает.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/gambler.png",
+    "flavor": "Орёл — я выиграл. Решка — ты проиграл.",
+    "otherNight": 17,
+    "otherNightReminder": "Выбирает игрока и роль"
+  },
+  "innkeeper": {
+    "id": "innkeeper",
+    "name": "Трактирщик",
+    "team": "townsfolk",
+    "ability": "Каждую ночь* выбирает 2 игроков: оба не умрут этой ночью, но 1 из них пьян до заката.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/innkeeper.png",
+    "flavor": "Заходи, добрый странник, отдохни и расслабь свои усталые кости. Пей и веселись, ибо легионы Тёмного Властелина не побеспокоят тебя этой ночью.",
+    "otherNight": 15,
+    "otherNightReminder": "Выбирает 2 игроков. Отметь их ЗАЩИЩËН, а одного из них ПЬЯН"
+  },
+  "exorcist": {
+    "id": "exorcist",
+    "name": "Экзорцист",
+    "team": "townsfolk",
+    "ability": "Каждую ночь* выбирает игрока (не того же, что вчера): если это Демон, тот узнаёт Экзорциста и не просыпается этой ночью.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/exorcist.png",
+    "flavor": "Мы изгоняем тебя, всякий нечистый дух, всякая сатанинская сила, всякое нападение адского врага, всякий легион, всякую дьявольскую группу и секту во имя и силой Господа нашего Иисуса Христа. Мы повелеваем тебе: уйди и держись подальше от Церкви Божьей, от душ, созданных Богом по Его образу и искупленных драгоценной кровью Божественного Агнца.",
+    "otherNight": 32,
+    "otherNightReminder": "Выбирает игрока. Если выбрал Демона: разбуди Демона. Покажи жетоны ЭТОТ ПЕРСОНАЖ ВЫБРАЛ ТЕБЯ и жетон Экзорцист, укажи на игрока."
+  },
+  "chambermaid": {
+    "id": "chambermaid",
+    "name": "Горничная",
+    "team": "townsfolk",
+    "ability": "Каждую ночь выбирает 2 живых игроков (не себя): узнаёт, сколько из них проснулись этой ночью из‑за своей способности.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/chambermaid.png",
+    "flavor": "Я ничего такого не видела, миледи. Прошу прощения, но если бы и видела, то точно не хозяина дома, крадущегося в лабораторию профессора около одиннадцати часов, чтобы смешивать какие-то хитрые зелья, как вы сказали, мисс.",
+    "firstNight": 70,
+    "firstNightReminder": "Выбирает 2 живых игроков. Покажи число",
+    "otherNight": 88,
+    "otherNightReminder": "Выбирает 2 живых игроков. Покажи число",
+    "jinxes": [
+      {
+        "id": "mathematician",
+        "reason": "Горничная узнает, что Математик просыпался ночью."
+      }
+    ]
+  },
+  "sailor": {
+    "id": "sailor",
+    "name": "Моряк",
+    "team": "townsfolk",
+    "ability": "Каждую ночь выбирает живого игрока: либо этот игрок либо Моряк пьян до заката. Не может умереть.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/sailor.png",
+    "flavor": "Я уложу любого под стол! Ты! Болтун! Думаешь, справишься со мной? Нет? А ты, Бабушка? Пробовала когда-нибудь «Старый МакКиллис Экстра Пряный Ром»? Гарантированно пробуждает в тебе настоящего морского волка! Поднимайся на борт, ага!",
+    "firstNight": 20,
+    "firstNightReminder": "Выбирает живого игрока. Отметь одного из них ПЬЯН",
+    "otherNight": 9,
+    "otherNightReminder": "Выбирает живого игрока. Отметь одного из них ПЬЯН"
+  },
+  "grandmother": {
+    "id": "grandmother",
+    "name": "Бабушка",
+    "team": "townsfolk",
+    "ability": "В первую ночь узнаёт доброго игрока и его роль. Если Демон убьёт его, Бабушка тоже умрёт.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/grandmother.png",
+    "flavor": "Надень куртку, если пойдёшь гулять, милый. И термос возьми. И шарф. У меня слабое сердце, ты же знаешь. Что со мной будет, если ты простудишься… или того хуже?",
+    "firstNight": 53,
+    "firstNightReminder": "Покажи игрока ВНУК  и его роль",
+    "otherNight": 67,
+    "otherNightReminder": "Если ВНУК убит Демоном, Бабушка умирает",
+    "jinxes": [
+      {
+        "id": "riot",
+        "reason": "Если Бунт в игре и внука казнили, зло побеждает."
+      },
+      {
+        "id": "leviathan",
+        "reason": "Если Левиафан в игре и внука казнили, зло побеждает."
+      }
+    ]
+  },
+  "beggar": {
+    "id": "beggar",
+    "name": "Попрошайка",
+    "team": "traveller",
+    "ability": "Может голосовать, только потратив жетон. Когда мёртвый игрок отдаёт свой жетон, Попрошайка узнаёт, злой тот или добрый.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/beggar.png",
+    "flavor": "Подайте бедному, добрый господин? Монетку, мадам? Спасибо! Да благословит вас Господь! Вы поистине добрая душа, вот уж точно! Сегодня у меня будет настоящий пир!"
+  },
+  "scapegoat": {
+    "id": "scapegoat",
+    "name": "Козёл отпущения",
+    "team": "traveller",
+    "ability": "Если игрока его команды казнили: может умереть вместо него.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/scapegoat.png",
+    "flavor": "Добрый вечер! Спасибо, что пригласили меня на бал. Я не отсюда, но вы, кажется, весьма дружелюбная компания, вот честное слово. Уверен, мы отлично поладим! Кстати, а зачем вам вся эта верёвка?"
+  },
+  "thief": {
+    "id": "thief",
+    "name": "Вор",
+    "team": "traveller",
+    "ability": "Каждую ночь выбирает игрока (не себя): завтра голос того считается за -1.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/thief.png",
+    "flavor": "Я ничего не делал. Меня даже не было в том переулке прошлой ночью! Это был не я, кто украл чемодан мэра Бруно со всеми этими важными документами. К тому же, он был слишком тяжёлый, чтобы далеко унести.",
+    "firstNight": 7,
+    "firstNightReminder": "Вор выбирает игрока.",
+    "otherNight": 4,
+    "otherNightReminder": "Вор выбирает игрока."
+  },
+  "imp": {
+    "id": "imp",
+    "name": "Бес",
+    "team": "demon",
+    "ability": "Каждую ночь* выбирает игрока: он умирает. Если убил себя этим способом: один из Приспешников становится Бесом.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/imp.png",
+    "flavor": "Мы должны держать разум острым, а меч — ещё острее. Зло ходит среди нас и не остановится ни перед чем, чтобы уничтожить нас, добропорядочных людей, и превратить наш прекрасный город в руины. Не доверяйте никому. Но если уж вам придётся кому-то довериться — доверьтесь мне.",
+    "otherNight": 35,
+    "otherNightReminder": "Выбирает игрока. Отметь его УБИТ. Если выбрал себя: замени жетон живого Миньона на жетон Беса. Разбуди его, покажи карточку ТЕПЕРЬ ТЫ и жетон Беса."
+  },
+  "baron": {
+    "id": "baron",
+    "name": "Барон",
+    "team": "minion",
+    "ability": "В игре есть дополнительные Изгои.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/baron.png",
+    "flavor": "Этот город катится в пропасть, что скажете? Дешёвая иностранная рабочая сила... вот это выход. Запихнуть их в шахты, говорю я! Немного тяжёлого труда никому не повредит, а каждому разбойнику, что скажет иное, — подзатыльник. В конце концов, важны только прибыли, не так ли?"
+  },
+  "scarletwoman": {
+    "id": "scarletwoman",
+    "name": "Алая Дама",
+    "team": "minion",
+    "ability": "Если в живых 5+ игроков (кроме Странников), и Демон умер: становится Демоном.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/scarletwoman.png",
+    "flavor": "Ты открыл мне тайны Совета Пурпурного Пламени. Мы вместе пылали в огне, страсти и зверином единении, и я был твоим верным слугой. Но этой ночью, мой дорогой, я — твой господин.",
+    "otherNight": 29,
+    "otherNightReminder": "Если стала Демоном, покажи карточку ТЕПЕРЬ ТЫ и роль Демоны"
+  },
+  "spy": {
+    "id": "spy",
+    "name": "Шпион",
+    "team": "minion",
+    "ability": "Каждую ночь смотрит в Гримуар. Способности других игроков могут считать его Горожанином или Изгоем, даже если он мертв.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/spy.png",
+    "flavor": "Любой знающий пивовар скажет, что нет смеси опаснее, чем та, где шпионов оказывается вдвое больше, чем ожидалось.",
+    "firstNight": 66,
+    "firstNightReminder": "Покажи Гримуар",
+    "otherNight": 85,
+    "otherNightReminder": "Покажи Гримуар",
+    "jinxes": [
+      {
+        "id": "damsel",
+        "reason": "Если Шпион  есть (был) в игре, Дамочка  отравлена."
+      }
+    ]
+  },
+  "poisoner": {
+    "id": "poisoner",
+    "name": "Отравитель",
+    "team": "minion",
+    "ability": "Каждую ночь выбирает игрока: тот отравлен на эту ночь и завтрашний день.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/poisoner.png",
+    "flavor": "Добавляем вещество Альфа в вещество Бета... НЕ СЛИШКОМ МНОГО!",
+    "firstNight": 27,
+    "firstNightReminder": "Выбирает игрока. Отметь его ОТРАВЛЕН ",
+    "otherNight": 13,
+    "otherNightReminder": "Выбирает игрока. Отметь его ОТРАВЛЕН"
+  },
+  "saint": {
+    "id": "saint",
+    "name": "Святой",
+    "team": "outsider",
+    "ability": "Если казнён, его команда проигрывает.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/saint.png",
+    "flavor": "Мудрость рождает мир. Терпение рождает мудрость. Не бойтесь, ибо настанет время, когда и страх пройдёт. Давайте молиться, и пусть наше единство сделает святыми нас всех."
+  },
+  "recluse": {
+    "id": "recluse",
+    "name": "Отшельник",
+    "team": "outsider",
+    "ability": "Способности других игроков могут считать его Миньоном или Демоном, даже если он мёртв.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/recluse.png",
+    "flavor": "Убирай свои грязные лапы от моей земли, понял? Грр. Жалкие воришки, шныряющие по округе! Прочь! Мне плевать на ваши споры, и с демонами я тоже не имею дела. Уходи, живо!"
+  },
+  "drunk": {
+    "id": "drunk",
+    "name": "Пьяница",
+    "team": "outsider",
+    "ability": "Не знает, что он Пьяница. Думает, что он Горожанин, но это не так.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/drunk.png",
+    "flavor": "Я всего лишь *ик* выпиваю за компанию, дорогая. Хотя, признаюсь, я весьма *ик* общительный.",
+    "jinxes": [
+      {
+        "id": "boffin",
+        "reason": "Демон не может получить способность Пьяницы."
+      },
+      {
+        "id": "mathematician",
+        "reason": "Математик может узнать, что способность Пьяницы сработала неправильно."
+      }
+    ]
+  },
+  "butler": {
+    "id": "butler",
+    "name": "Дворецкий",
+    "team": "outsider",
+    "ability": "Каждую ночь выбирает игрока (не себя): завтра может голосовать, только если тот голосует.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/butler.png",
+    "flavor": "Да, сэр... Нет, сэр... Конечно, сэр.",
+    "firstNight": 52,
+    "firstNightReminder": "Выбирает игрока. Отметь его МАСТЕР ",
+    "otherNight": 84,
+    "otherNightReminder": "Выбирает игрока. Отметь его МАСТЕР ",
+    "jinxes": [
+      {
+        "id": "cannibal",
+        "reason": "Каннибал  узнаёт, что съел Дворецкого."
+      }
+    ]
+  },
+  "mayor": {
+    "id": "mayor",
+    "name": "Мэр",
+    "team": "townsfolk",
+    "ability": "Если в живых 3 игрока и не было казни: его команда побеждает. Ночью другой игрок может умереть вместо него.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/mayor.png",
+    "flavor": "Мы должны отбросить разногласия и прекратить это бессмысленное кровопролитие. В конце концов, мы все налогоплательщики. Ну, большинство из нас."
+  },
+  "soldier": {
+    "id": "soldier",
+    "name": "Солдат",
+    "team": "townsfolk",
+    "ability": "Защищён от всех способностей Демона.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/soldier.png",
+    "flavor": "Как сказал Давид Голиафу, как сказал Тезей Минотавру, как сказал Арджуна Бхагадатте... Нет."
+  },
+  "slayer": {
+    "id": "slayer",
+    "name": "Истребитель демонов",
+    "team": "townsfolk",
+    "ability": "Раз за игру днём публично выбирает игрока: если это Демон, тот умирает.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/slayer.png",
+    "flavor": "Умри.",
+    "jinxes": [
+      {
+        "id": "lleech",
+        "reason": "Если Истребитель демонов убил Носителя, Пиявица умирает."
+      }
+    ]
+  },
+  "virgin": {
+    "id": "virgin",
+    "name": "Дева",
+    "team": "townsfolk",
+    "ability": "Если была номинирована впервые за игру, и это сделал Горожанин: тот мгновенно казнён.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/virgin.png",
+    "flavor": "Я чиста. Пусть безгрешные падут и страдают вместо меня. Моя репутация не будет запятнана вашими ядовитыми обвинениями."
+  },
+  "ravenkeeper": {
+    "id": "ravenkeeper",
+    "name": "Хранитель воронов",
+    "team": "townsfolk",
+    "ability": "Если умер ночью, выбирает игрока: узнаёт его роль.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/ravenkeeper.png",
+    "flavor": "Мои птицы отомстят за меня! Летите! Летите, мои милые и преданные создания! К особняку и к реке! В переулки и салоны! Летите!",
+    "otherNight": 68,
+    "otherNightReminder": "Если умер этой ночью: выбирает игрока. Покажи его роль"
+  },
+  "monk": {
+    "id": "monk",
+    "name": "Монах",
+    "team": "townsfolk",
+    "ability": "Каждую ночь* выбирает игрока (не себя): он защищён от Демона этой ночью",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/monk.png",
+    "flavor": "Сегодня бушуют злобные гибельные ветра. Пойдём, брат мой, укроемся в монастыре, пока бушует буря. Клянусь жизнью, ты будешь в безопасности.",
+    "otherNight": 20,
+    "otherNightReminder": "Выбирает игрока. Отметь его ЗАЩИЩËН ",
+    "jinxes": [
+      {
+        "id": "riot",
+        "reason": "Если Бунт номинирует и казнит игрока, защищенного Монахом, добро побеждает."
+      },
+      {
+        "id": "leviathan",
+        "reason": "Если Левиафан номинирует и казнит игрока, защищённого Монахом, добро побеждает."
+      }
+    ]
+  },
+  "undertaker": {
+    "id": "undertaker",
+    "name": "Гробовщик",
+    "team": "townsfolk",
+    "ability": "Каждую ночь* узнаёт роль последнего умершего от казни игрока.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/undertaker.png",
+    "flavor": "Хммм... что у нас тут? Левый сапог стёрт до пятки, а под язычком — кремниевые опилки. Это обмундирование военного.",
+    "otherNight": 71,
+    "otherNightReminder": "Покажи роль игрока КАЗНËН СЕГОДНЯ "
+  },
+  "fortuneteller": {
+    "id": "fortuneteller",
+    "name": "Гадалка",
+    "team": "townsfolk",
+    "ability": "Каждую ночь выбирает 2 игроков: узнаёт, есть ли среди них Демон. Считает 1 доброго игрока Демоном.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/fortuneteller.png",
+    "flavor": "Я чувствую великое зло в твоей душе! Но... может, это просто твой парфюм. У меня аллергия на бузину.",
+    "firstNight": 51,
+    "firstNightReminder": "Выбирает 2 игроков. Покажи ДА или НЕТ",
+    "otherNight": 70,
+    "otherNightReminder": "Выбирает 2 игроков. Покажи ДА или НЕТ"
+  },
+  "empath": {
+    "id": "empath",
+    "name": "Эмпат",
+    "team": "townsfolk",
+    "ability": "Каждую ночь узнаёт, сколько злых игроков среди его 2 живых соседей.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/empath.png",
+    "flavor": "Мурашки по коже. Что-то здесь не так. Я это чувствую.",
+    "firstNight": 50,
+    "firstNightReminder": "Покажи число",
+    "otherNight": 69,
+    "otherNightReminder": "Покажи число"
+  },
+  "chef": {
+    "id": "chef",
+    "name": "Шеф",
+    "team": "townsfolk",
+    "ability": "В первую ночь узнаёт, сколько пар злых игроков сидит за столом.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/chef.png",
+    "flavor": "Бронирования на этот вечер выглядят странно. Никогда прежде миссис Мэйуэзер не общалась с этим пронырой Хадсон-Лейн. Но сегодня у них столик на двоих. Странно.",
+    "firstNight": 49,
+    "firstNightReminder": "Покажи число"
+  },
+  "investigator": {
+    "id": "investigator",
+    "name": "Сыщик",
+    "team": "townsfolk",
+    "ability": "В первую ночь узнаёт, что 1 из 2 игроков — определённый Приспешник.",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/investigator.png",
+    "flavor": "Прекрасная ночь для прогулки, вы так не думаете, мистер Морозов? Или лучше сказать... БАРОН Морозов?",
+    "firstNight": 48,
+    "firstNightReminder": "Покажи 2 игроков: ПРАВДА и ЛОЖЬ, и 1 роль Приспешники ",
+    "jinxes": [
+      {
+        "id": "vizier",
+        "reason": "Рассказчик не объявляет, что Визирь есть в игре."
+      }
+    ]
+  },
+  "librarian": {
+    "id": "librarian",
+    "name": "Библиотекарь",
+    "team": "townsfolk",
+    "ability": "В первую ночь узнаёт, что 1 из 2 игроков — определённый Изгой (или что в игре 0 Изгоев).",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/librarian.png",
+    "flavor": "Конечно, мадам, при обычных обстоятельствах вы могли бы взять Кодекс Малификум из хранилища библиотеки. Однако, похоже, вы не являетесь членом библиотеки.",
+    "firstNight": 47,
+    "firstNightReminder": "Покажи 2 игроков: ПРАВДА и ЛОЖЬ, и 1 роль Изгои"
+  },
+  "washerwoman": {
+    "id": "washerwoman",
+    "name": "Прачка",
+    "team": "townsfolk",
+    "ability": "В первую ночь узнаёт, что 1 из 2 игроков — определённый Горожанин",
+    "image": "https://raw.githubusercontent.com/botc-ru/script/main/images/roles/washerwoman.png",
+    "flavor": "Пятна крови на смокинге? Нет, это всего лишь кулинарный херес. Как небрежно.",
+    "firstNight": 46,
+    "firstNightReminder": "Покажи 2 игроков: ПРАВДА и ЛОЖЬ, и 1 роль Горожане"
+  }
+}
