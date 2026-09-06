@@ -105,6 +105,9 @@ function mapRole(role, jinxes) {
     const otherNightReminder = plainText(p['Другие ночи подсказка'].rich_text)
     if (otherNightReminder) result.otherNightReminder = otherNightReminder
 
+    const modifications = plainText(p['Замены'].rich_text)
+    if (modifications) result.modifications = modifications
+
     if (jinxes?.length) result.jinxes = jinxes
 
     return result
