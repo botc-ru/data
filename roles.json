@@ -4,7 +4,8 @@
     "name": "Еремит",
     "team": "outsider",
     "ability": "Имеет способности всех Изгоев из сценария.",
-    "image": "https://raw.githubusercontent.com/botc-ru/data/refs/heads/main/images/roles/hermit.png"
+    "image": "https://raw.githubusercontent.com/botc-ru/data/refs/heads/main/images/roles/hermit.png",
+    "modifications": "-0 или -1 Изгой"
   },
   "wraith": {
     "id": "wraith",
@@ -370,7 +371,8 @@
     "team": "fabled",
     "ability": "В игре может быть на 1 Изгоя больше или меньше.",
     "image": "https://raw.githubusercontent.com/botc-ru/data/refs/heads/main/images/roles/sentinel.png",
-    "flavor": "Имя, пожалуйста. Документы, пожалуйста. Оружие, пожалуйста."
+    "flavor": "Имя, пожалуйста. Документы, пожалуйста. Оружие, пожалуйста.",
+    "modifications": "-1 .. +1 Изгой"
   },
   "duchess": {
     "id": "duchess",
@@ -472,7 +474,8 @@
     "firstNight": 2,
     "firstNightReminder": "Замените соседей Повелителя Бури на Миньонов, разбудите их, сообщите их новую сторону и персонажа, затем выполните процедуру информации для Миньонов.",
     "otherNight": 43,
-    "otherNightReminder": "Повелитель Бури выбирает игрока."
+    "otherNightReminder": "Повелитель Бури выбирает игрока.",
+    "modifications": "[Злодеи сидят подряд. Демон сидит в центре. +1 Приспешник. -? до +? Изгоев]"
   },
   "zealot": {
     "id": "zealot",
@@ -527,6 +530,7 @@
     "firstNightReminder": "Покажите жетон *ЭТИ ПЕРСОНАЖИ НЕ В ИГРЕ*. Покажите 3 отсутствующих хороших персонажа.",
     "otherNight": 30,
     "otherNightReminder": "Обновите жетон напоминания Призывателя на соответствующую ночь. Если это 3-я ночь, Призыватель выбирает игрока и Демона. Усыпите Призывателя. Разбудите выбранного игрока. Покажите жетон *ВЫ ЯВЛЯЕТЕСЬ*, большой палец вниз и жетон выбранного Демона.",
+    "modifications": "Нет Демона.",
     "jinxes": [
       {
         "id": "zombuul",
@@ -564,7 +568,8 @@
     "firstNight": 62,
     "firstNightReminder": "Если Дурачков > 1, отметь 1 из них ПЬЯН. Дурачки просыпаются по очереди, выбирают игрока, покажи большой палец вверх или вниз",
     "otherNight": 79,
-    "otherNightReminder": "Дурачки просыпаются по очереди, выбирают игрока, покажи большой палец вверх или вниз"
+    "otherNightReminder": "Дурачки просыпаются по очереди, выбирают игрока, покажи большой палец вверх или вниз",
+    "modifications": "+0 до +2 Дурачков. Один из добавленных пьян"
   },
   "kazali": {
     "id": "kazali",
@@ -577,6 +582,7 @@
     "firstNightReminder": "Разбудите Казали, дайте выбрать Миньонов.",
     "otherNight": 50,
     "otherNightReminder": "Казали выбирает игрока.",
+    "modifications": "–? до +? Изгоев",
     "jinxes": [
       {
         "id": "bountyhunter",
@@ -746,7 +752,8 @@
     "image": "https://raw.githubusercontent.com/botc-ru/data/refs/heads/main/images/roles/legion.png",
     "flavor": "Мы — холодный ветер зимнего дня. Мы — тень в безлунную ночь. Мы — яд в твоем чае и шепот в твоем ухе. Мы повсюду.",
     "otherNight": 34,
-    "otherNightReminder": "Игрок может умереть."
+    "otherNightReminder": "Игрок может умереть.",
+    "modifications": "Большинство игроков — Легион"
   },
   "alhadikhia": {
     "id": "alhadikhia",
@@ -787,6 +794,7 @@
     "firstNightReminder": "Приспешники выбирают опекуна",
     "otherNight": 48,
     "otherNightReminder": "Приспешники выбирают опекуна. Один игрок может умереть.",
+    "modifications": "+1 Приспешник",
     "jinxes": [
       {
         "id": "poppygrower",
@@ -811,6 +819,7 @@
     "flavor": "Слова, слова. Только на них мы и можем полагаться.",
     "firstNight": 21,
     "firstNightReminder": "Разбуди Демона. Покажите ему жетон Марионетка и игрока",
+    "modifications": "Получает синий жетон, сосед Демона",
     "jinxes": [
       {
         "id": "mathematician",
@@ -995,6 +1004,7 @@
     "ability": "Рассказчик может нарушать правила игры. Если Рассказчика казнят, добро побеждает, даже если Атеист мертв.",
     "image": "https://raw.githubusercontent.com/botc-ru/data/refs/heads/main/images/roles/atheist.png",
     "flavor": "Давайте отбросим ненужные догадки и глупую паранойю. Для всего есть рациональное объяснение. Да, возможно, чайная чашка действительно вращается вокруг планеты, слишком маленькая, чтобы её увидеть, но я предпочту выпить свой чай из реального фарфора в моих реальных руках.",
+    "modifications": "Нет злых персонажей.",
     "jinxes": [
       {
         "id": "riot",
@@ -1028,7 +1038,8 @@
     "image": "https://raw.githubusercontent.com/botc-ru/data/refs/heads/main/images/roles/choirboy.png",
     "flavor": "Я видел, видел! Я был в церковных рядах, раскладывал псалмы, когда из органа зазвучала жуткая мелодия. Органист был в длинном плаще, с длинными пальцами на клавишах. И шляпа у него была… точь-в-точь как у тебя.",
     "otherNight": 60,
-    "otherNightReminder": "Если Демон убил Короля, укажите на игрока, который является Демоном."
+    "otherNightReminder": "Если Демон убил Короля, укажите на игрока, который является Демоном.",
+    "modifications": "+Король"
   },
   "magician": {
     "id": "magician",
@@ -1128,7 +1139,8 @@
     "image": "https://raw.githubusercontent.com/botc-ru/data/refs/heads/main/images/roles/lycanthrope.png",
     "flavor": "Под тонкой оболочкой цивилизации скрывается воющий ужас.",
     "otherNight": 33,
-    "otherNightReminder": "Выбирает игрока. Если он добрый, отметь его УБИТ"
+    "otherNightReminder": "Выбирает игрока. Если он добрый, отметь его УБИТ",
+    "modifications": "1 добрый игрок может считаться для всех злым"
   },
   "cultleader": {
     "id": "cultleader",
@@ -1152,7 +1164,8 @@
     "firstNight": 60,
     "firstNightReminder": "Покажите любого игрока.",
     "otherNight": 78,
-    "otherNightReminder": "Покажите игрока с другим типом персонажа, чем в предыдущую ночь."
+    "otherNightReminder": "Покажите игрока с другим типом персонажа, чем в предыдущую ночь.",
+    "modifications": " +0 или +1 Изгой"
   },
   "king": {
     "id": "king",
@@ -1211,6 +1224,7 @@
     "firstNightReminder": "Покажите игрока: ЗНАЕТ ",
     "otherNight": 81,
     "otherNightReminder": "Если игрок ЗНАЕТ умер, отметь другого злого игрока ЗНАЕТ, покажи его",
+    "modifications": "1 Горожанин — злой",
     "jinxes": [
       {
         "id": "philosopher",
@@ -1270,7 +1284,8 @@
     "image": "https://raw.githubusercontent.com/botc-ru/data/refs/heads/main/images/roles/vigormortis.png",
     "flavor": "Все двери — это одна дверь. Все ключи — это один ключ. Все чаши — это одна чаша, но кто выпьет из воды, что я даю, никогда не будет жаждать, ибо вода станет в нём источником, бьющим в жизнь вечную.",
     "otherNight": 44,
-    "otherNightReminder": "Выбирает игрока. Если выбран Приспешники, отравите соседнего Горожане"
+    "otherNightReminder": "Выбирает игрока. Если выбран Приспешники, отравите соседнего Горожане",
+    "modifications": "-1 Изгой"
   },
   "fanggu": {
     "id": "fanggu",
@@ -1280,7 +1295,8 @@
     "image": "https://raw.githubusercontent.com/botc-ru/data/refs/heads/main/images/roles/fanggu.png",
     "flavor": "Ваши стены и оружие – лишь дым во снах.",
     "otherNight": 40,
-    "otherNightReminder": "Выбирает игрока. Если выбран Изгои  (только один раз): замени жетон Изгои на запасной жетон Фан Гу. Разбуди игрока. Покажи карточку ТЕПЕРЬ ТЫ и роль Фан Гу. Покажи большой палец вниз"
+    "otherNightReminder": "Выбирает игрока. Если выбран Изгои  (только один раз): замени жетон Изгои на запасной жетон Фан Гу. Разбуди игрока. Покажи карточку ТЕПЕРЬ ТЫ и роль Фан Гу. Покажи большой палец вниз",
+    "modifications": "+1 Изгой"
   },
   "pithug": {
     "id": "pithug",
@@ -1640,7 +1656,8 @@
     "firstNight": 32,
     "firstNightReminder": "Покажи жетоны всех Изгоев в игре",
     "otherNight": 52,
-    "otherNightReminder": "Если Изгой умер сегодня, выбирает игрока. Отметь его УБИТ"
+    "otherNightReminder": "Если Изгой умер сегодня, выбирает игрока. Отметь его УБИТ",
+    "modifications": "–1 или +1 Изгой"
   },
   "lunatic": {
     "id": "lunatic",
@@ -1653,6 +1670,7 @@
     "firstNightReminder": "Если 7+ игроков: покажи Приспешников и 3 блефа",
     "otherNight": 31,
     "otherNightReminder": "Выбирает игрока(ов). Отметь их ВЫБРАН ",
+    "modifications": "Получает жетон Демона",
     "jinxes": [
       {
         "id": "mathematician",
@@ -1889,7 +1907,8 @@
     "team": "minion",
     "ability": "В игре есть дополнительные Изгои.",
     "image": "https://raw.githubusercontent.com/botc-ru/data/refs/heads/main/images/roles/baron.png",
-    "flavor": "Этот город катится в пропасть, что скажете? Дешёвая иностранная рабочая сила... вот это выход. Запихнуть их в шахты, говорю я! Немного тяжёлого труда никому не повредит, а каждому разбойнику, что скажет иное, — подзатыльник. В конце концов, важны только прибыли, не так ли?"
+    "flavor": "Этот город катится в пропасть, что скажете? Дешёвая иностранная рабочая сила... вот это выход. Запихнуть их в шахты, говорю я! Немного тяжёлого труда никому не повредит, а каждому разбойнику, что скажет иное, — подзатыльник. В конце концов, важны только прибыли, не так ли?",
+    "modifications": "+2 Изгоя"
   },
   "scarletwoman": {
     "id": "scarletwoman",
@@ -1954,6 +1973,7 @@
     "ability": "Не знает, что он Пьяница. Думает, что он Горожанин, но это не так.",
     "image": "https://raw.githubusercontent.com/botc-ru/data/refs/heads/main/images/roles/drunk.png",
     "flavor": "Я всего лишь *ик* выпиваю за компанию, дорогая. Хотя, признаюсь, я весьма *ик* общительный.",
+    "modifications": "Получает жетон Горожанина",
     "jinxes": [
       {
         "id": "boffin",
