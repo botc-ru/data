@@ -80,15 +80,15 @@ function mapRole(role, jinxes) {
     const p = role.properties
     const id = plainText(p['ID'].rich_text)
     const team = TEAMS[p['Тип'].relation[0]?.id]
-    if (!id || !team) return null
+    if (!id) return null
 
     const result = {
         id,
         name: plainText(p['Название'].title),
-        team,
         ability: plainText(p['Способность'].rich_text),
         image: `https://raw.githubusercontent.com/botc-ru/data/refs/heads/main/images/roles/${id}.png`,
     }
+    if (team) result.team = team
 
     const flavor = plainText(p['Цитата'].rich_text)
     if (flavor) result.flavor = flavor
