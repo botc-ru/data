@@ -94,13 +94,13 @@ function mapRole(role, jinxes) {
     if (flavor) result.flavor = flavor
 
     const firstNight = p['Первая ночь порядок'].number
-    if (firstNight) result.firstNight = firstNight
+    if (firstNight != null) result.firstNight = firstNight
 
     const firstNightReminder = plainText(p['Первая ночь подсказка'].rich_text)
     if (firstNightReminder) result.firstNightReminder = firstNightReminder
 
     const otherNight = p['Другие ночи порядок'].number
-    if (otherNight) result.otherNight = otherNight
+    if (otherNight != null) result.otherNight = otherNight
 
     const otherNightReminder = plainText(p['Другие ночи подсказка'].rich_text)
     if (otherNightReminder) result.otherNightReminder = otherNightReminder
