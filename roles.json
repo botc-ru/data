@@ -836,7 +836,7 @@
   "marionette": {
     "id": "marionette",
     "name": "Марионетка",
-    "ability": "Не знает, что она Марионетка. Думает, что она Горожанин или Изгой, но это не так. Демон знает Марионетку.",
+    "ability": "Не знает, что она Марионетка. Думает, что она Горожанин или Изгой, но это не так. Демон знает Марионетку.",
     "image": "https://raw.githubusercontent.com/botc-ru/data/refs/heads/main/images/roles/marionette.png",
     "team": "minion",
     "flavor": "Слова, слова. Только на них мы и можем полагаться.",
