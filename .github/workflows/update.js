@@ -46,11 +46,7 @@ async function fetchPage(sourceId, start_cursor) {
     return await res.json()
 }
 
-async function mapRoles(roles, jinxes) {
-    const pageIdToRoleId = Object.fromEntries(
-        roles.map(role => [role.id, plainText(role.properties['ID'].rich_text)])
-    )
-
+async function mapRoles(roles, jinxes, pageIdToRoleId) {
     const jinxesByRoleId = {}
     for (const jinx of jinxes) {
         const [first, second] = jinx.properties['Персонажи'].relation
@@ -117,19 +113,52 @@ function plainText(richText) {
     return richText.map(t => t.plain_text).join('')
 }
 
-async function fetchIcons(folder, json) {
+async function mapScripts(scripts, pageIdToRoleId) {
+    const results = scripts
+        .map(script => mapScript(script, pageIdToRoleId))
+        .filter(script => script != null)
+
+    await writeFile('scripts.json', JSON.stringify(results, null, 2), { encoding: "utf8" })
+    console.log(`scripts.json saved with ${results.length} scripts.`)
+}
+
+function mapScript(script, pageIdToRoleId) {
+    const p = script.properties
+    const name = plainText(p['Название'].title)
+    const characterIds = p['Персонажи'].relation
+        .map(({ id }) => pageIdToRoleId[id])
+        .filter(Boolean)
+
+    if (!name || characterIds.length < 4) return null
+
+    const meta = { id: '_meta', name }
+
+    const author = plainText(p['Автор'].rich_text)
+    if (author) meta.author = author
+
+    const iconName = p['ID']?.unique_id
+        ? `${p['ID'].unique_id.prefix}-${p['ID'].unique_id.number}`
+        : script.id
+    if (script.icon?.file?.url) {
+        meta.logo = `https://raw.githubusercontent.com/botc-ru/data/refs/heads/main/images/scripts/${iconName}.png`
+    }
+
+    return [meta, ...characterIds]
+}
+
+async function fetchIcons(folder, json, getName) {
     await mkdir(`images/${folder}`, { recursive: true })
 
     let done = 0
-    await Promise.all(json.map(page => fetchIcon(folder, page, () => {
+    await Promise.all(json.map(page => fetchIcon(folder, page, getName, () => {
         done++
         if (done % 10 === 0) console.log(`${folder} icons: #${done}`)
     })))
 }
 
-async function fetchIcon(folder, page, onDone) {
+async function fetchIcon(folder, page, getName, onDone) {
     const url = page?.icon?.file?.url
-    const name = page?.properties?.ID?.rich_text?.[0]?.plain_text ?? page?.id
+    const name = getName(page)
     if (!url) return
 
     const res = await fetch(url)
@@ -146,12 +175,21 @@ async function fetchIcon(folder, page, onDone) {
     onDone()
 }
 
-const [roles, jinxes] = await Promise.all([
+const [roles, jinxes, scripts] = await Promise.all([
     fetchDatabase(process.env.ROLES_DATABASE, 'roles'),
     fetchDatabase(process.env.JINXES_DATABASE, 'jinxes'),
+    fetchDatabase(process.env.SCRIPTS_DATABASE, 'scripts'),
 ])
 
+const pageIdToRoleId = Object.fromEntries(
+    roles.map(role => [role.id, plainText(role.properties['ID'].rich_text)])
+)
+
 await Promise.all([
-    mapRoles(roles, jinxes),
-    fetchIcons('roles', roles),
+    mapRoles(roles, jinxes, pageIdToRoleId),
+    mapScripts(scripts, pageIdToRoleId),
+    fetchIcons('roles', roles, page => page?.properties?.ID?.rich_text?.[0]?.plain_text ?? page?.id),
+    fetchIcons('scripts', scripts, page => page?.properties?.ID?.unique_id
+        ? `${page.properties.ID.unique_id.prefix}-${page.properties.ID.unique_id.number}`
+        : page?.id),
 ])

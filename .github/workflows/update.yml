@@ -17,6 +17,7 @@ jobs:
       NOTION_VERSION: ${{ secrets.NOTION_VERSION }}
       ROLES_DATABASE: ${{ secrets.ROLES_DATABASE }}
       JINXES_DATABASE: ${{ secrets.JINXES_DATABASE }}
+      SCRIPTS_DATABASE: ${{ secrets.SCRIPTS_DATABASE }}
     
     steps:
       - name: Checkout repository
