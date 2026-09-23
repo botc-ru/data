@@ -287,6 +287,35 @@
   [
     {
       "id": "_meta",
+      "name": "Хор Братьев Гримм "
+    },
+    "general",
+    "villageidiot",
+    "towncrier",
+    "innkeeper",
+    "gambler",
+    "exorcist",
+    "amnesiac",
+    "nightwatchman",
+    "slayer",
+    "fisherman",
+    "soldier",
+    "damsel",
+    "drunk",
+    "golem",
+    "politician",
+    "godfather",
+    "summoner",
+    "assassin",
+    "scarletwoman",
+    "yaggababble",
+    "pukka",
+    "ojo",
+    "po"
+  ],
+  [
+    {
+      "id": "_meta",
       "name": "Punchy",
       "logo": "https://raw.githubusercontent.com/botc-ru/data/refs/heads/main/images/scripts/SCRIPT-9.png"
     },
