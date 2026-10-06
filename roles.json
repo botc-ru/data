@@ -693,7 +693,7 @@
     "team": "townsfolk",
     "flavor": "Когда человек лжёт, он убивает часть мира.",
     "firstNight": 58,
-    "firstNightReminder": "Покажите 2 игроков ЗНАЕТ "
+    "firstNightReminder": "Покажите 2 игроков Untitled "
   },
   "vizier": {
     "id": "vizier",
@@ -1003,7 +1003,7 @@
     "team": "townsfolk",
     "flavor": "Я не люблю клоунов. У них странный вкус.",
     "otherNight": 1,
-    "otherNightReminder": "Разбуди Каннибала и разыграйте способность игрока УЖИН ",
+    "otherNightReminder": "Разбуди Каннибала и разыграйте способность игрока Untitled ",
     "jinxes": [
       {
         "id": "zealot",
@@ -1238,7 +1238,7 @@
     "team": "townsfolk",
     "flavor": "Друг за другом по траве,\nДевки бегают везде.\nМальчик лезет на сучок.\nКем же станешь ты, дружок?\nДамы — в город, напоказ.\nЛорды валят лес подчас.\nЧто твоё — всё у меня,\nГлупая, глупая Фея — я…",
     "firstNight": 42,
-    "firstNightReminder": "Покажи роль игрока: ПОМЕШАН "
+    "firstNightReminder": "Покажи роль игрока: Untitled "
   },
   "bountyhunter": {
     "id": "bountyhunter",
@@ -1248,9 +1248,9 @@
     "team": "townsfolk",
     "flavor": "Я одинокий охотник в этом городе, пропитанном зловонием коррупции. Оно проникает в ноздри, обжигая омерзением. И предвкушением. Болезнь этого проклятого места распространяется с каждой ночью. А я... Я — лекарство.",
     "firstNight": 63,
-    "firstNightReminder": "Покажите игрока: ЗНАЕТ ",
+    "firstNightReminder": "Покажите игрока: Untitled ",
     "otherNight": 81,
-    "otherNightReminder": "Если игрок ЗНАЕТ умер, отметь другого злого игрока ЗНАЕТ, покажи его",
+    "otherNightReminder": "Если игрок Untitled умер, отметь другого злого игрока Untitled, покажи его",
     "modifications": "1 Горожанин — злой",
     "jinxes": [
       {
@@ -1271,7 +1271,7 @@
     "team": "townsfolk",
     "flavor": "Сарказм — это низшая форма остроумия. Но, отвечая на вашу критику, сэр, — это, тем не менее, форма остроумия.",
     "firstNight": 59,
-    "firstNightReminder": "Покажи 3 игроков: ЗНАЕТ "
+    "firstNightReminder": "Покажи 3 игроков: Untitled "
   },
   "harlot": {
     "id": "harlot",
