@@ -6,14 +6,6 @@
     "image": "https://raw.githubusercontent.com/botc-ru/data/refs/heads/main/images/roles/knaves.png",
     "team": "loric"
   },
-  "travellers": {
-    "id": "travellers",
-    "name": "СТРАННИКИ",
-    "ability": "",
-    "image": "https://raw.githubusercontent.com/botc-ru/data/refs/heads/main/images/roles/travellers.png",
-    "firstNight": 42,
-    "otherNight": 38
-  },
   "hermit": {
     "id": "hermit",
     "name": "Еремит",
