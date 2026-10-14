@@ -2,6 +2,37 @@
   [
     {
       "id": "_meta",
+      "name": "Лабиринт Минотавра"
+    },
+    "investigator",
+    "clockmaker",
+    "mathematician",
+    "fortuneteller",
+    "towncrier",
+    "monk",
+    "savant",
+    "seamstress",
+    "professor",
+    "slayer",
+    "fisherman",
+    "cannibal",
+    "ravenkeeper",
+    "recluse",
+    "klutz",
+    "mutant",
+    "politician",
+    "godfather",
+    "witch",
+    "scarletwoman",
+    "cerenovus",
+    "imp",
+    "shabaloth",
+    "po",
+    "fanggu"
+  ],
+  [
+    {
+      "id": "_meta",
       "name": "Тихая ночь",
       "logo": "https://raw.githubusercontent.com/botc-ru/data/refs/heads/main/images/scripts/SCRIPT-32.png"
     },

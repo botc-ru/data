@@ -1,4 +1,11 @@
 {
+  "knaves": {
+    "id": "knaves",
+    "name": "Плуты",
+    "ability": "Игру ведут 2 Рассказчика: один всегда врёт, другой всегда говорит правду. Раз за игру, на закате игрового дня, Рассказчики могут поменяться ролями.",
+    "image": "https://raw.githubusercontent.com/botc-ru/data/refs/heads/main/images/roles/knaves.png",
+    "team": "loric"
+  },
   "travellers": {
     "id": "travellers",
     "name": "СТРАННИКИ",
