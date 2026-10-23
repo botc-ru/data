@@ -8,7 +8,7 @@
   },
   "hermit": {
     "id": "hermit",
-    "name": "Еремит",
+    "name": "Отшельник",
     "ability": "Имеет способности всех Изгоев из сценария.",
     "image": "https://raw.githubusercontent.com/botc-ru/data/refs/heads/main/images/roles/hermit.png",
     "team": "outsider",
@@ -1993,7 +1993,7 @@
   },
   "recluse": {
     "id": "recluse",
-    "name": "Отшельник",
+    "name": "Затворник",
     "ability": "Способности других игроков могут считать его Миньоном или Демоном, даже если он мёртв.",
     "image": "https://raw.githubusercontent.com/botc-ru/data/refs/heads/main/images/roles/recluse.png",
     "team": "outsider",
