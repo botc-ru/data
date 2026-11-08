@@ -2170,7 +2170,7 @@
     "ability": "",
     "image": "https://raw.githubusercontent.com/botc-ru/data/refs/heads/main/images/roles/dawn.png",
     "firstNight": 1000,
-    "firstNightReminder": "Подожди пару секунд. Объяви день",
+    "firstNightReminder": "Подожди пару секунд. Объяви день.",
     "otherNight": 1000,
     "otherNightReminder": "Подожди пару секунд. Объяви день"
   },
@@ -2200,7 +2200,7 @@
     "ability": "",
     "image": "https://raw.githubusercontent.com/botc-ru/data/refs/heads/main/images/roles/demoninfo.png",
     "firstNight": 18,
-    "firstNightReminder": "Если 7+ игроков: покажи Приспешников и 3 блефа"
+    "firstNightReminder": "Разбуди Демона. Покажи ему всех Приспешников. Покажи 3 роли для блефа."
   },
   "minioninfo": {
     "id": "minioninfo",
@@ -2208,7 +2208,7 @@
     "ability": "",
     "image": "https://raw.githubusercontent.com/botc-ru/data/refs/heads/main/images/roles/minioninfo.png",
     "firstNight": 14,
-    "firstNightReminder": "Если 7+ игроков: покажи других Приспешников и Демона"
+    "firstNightReminder": "Разбуди всех Приспешников. Покажи им Демона."
   },
   "dusk": {
     "id": "dusk",
@@ -2216,7 +2216,7 @@
     "ability": "",
     "image": "https://raw.githubusercontent.com/botc-ru/data/refs/heads/main/images/roles/dusk.png",
     "firstNight": 0,
-    "firstNightReminder": "Объяви ночь. Все закрывают глаза",
+    "firstNightReminder": "Объяви ночь. Все закрывают глаза.",
     "otherNight": 0,
     "otherNightReminder": "Объяви ночь. Все закрывают глаза"
   }
