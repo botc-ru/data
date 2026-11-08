@@ -1686,7 +1686,7 @@
     "firstNightReminder": "Покажи жетоны Изгоев в игре.",
     "otherNight": 52,
     "otherNightReminder": "Если Изгой умер днём, выбирает игрока. 𒊹",
-    "modifications": "–1 или +1 Изгой."
+    "modifications": "-1 или +1 Изгой."
   },
   "lunatic": {
     "id": "lunatic",
