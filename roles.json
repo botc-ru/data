@@ -25,7 +25,7 @@
   "mortician_fall_of_rome": {
     "id": "mortician_fall_of_rome",
     "name": "Похоронщик",
-    "ability": "Каждую ночь* узнаёт, есть ли злодеи среди живых соседей казнённого днём игрока.",
+    "ability": "Каждую ночь* узнаёт, есть ли злодеи среди живых соседей казнённого днём игрока.",
     "image": "https://raw.githubusercontent.com/botc-ru/data/refs/heads/main/images/roles/mortician_fall_of_rome.png",
     "team": "townsfolk",
     "otherNight": 21
@@ -46,7 +46,7 @@
   "emperor_fall_of_rome": {
     "id": "emperor_fall_of_rome",
     "name": "Император",
-    "ability": "Каждый день выбирайте исход первой казни. Если вы выбираете защитить сегодняшнюю цель — она выживает. Иначе вы этой ночью узнаёте её мировоззрение.",
+    "ability": "Каждый день решает исход первой казни.\nЕсли выбрал казнить, ночью узнаёт сторону казнённого игрока.",
     "image": "https://raw.githubusercontent.com/botc-ru/data/refs/heads/main/images/roles/emperor_fall_of_rome.png",
     "team": "traveller",
     "flavor": "\"Какая смерть предпочитательнее всех прочих? Нежданная.\"",
@@ -55,7 +55,7 @@
   "highpriest_fall_of_rome": {
     "id": "highpriest_fall_of_rome",
     "name": "Верховный жрец",
-    "ability": "Каждый день публично выбирайте уникального живого игрока, чтобы благословить: если большинство согласны, с ним случается нечто хорошее.",
+    "ability": "Каждый день публично выбирает живого игрока, которого ещё не выбирал: если согласны большинство игроков (включая мёртвых), с ним случится нечто хорошее.",
     "image": "https://raw.githubusercontent.com/botc-ru/data/refs/heads/main/images/roles/highpriest_fall_of_rome.png",
     "team": "traveller",
     "flavor": "\"Пренебрегать знамениями богов — значит отрицать их существование.\" — Цицерон, 106 — 43 до н.э.",
@@ -64,7 +64,7 @@
   "sibyl_fall_of_rome": {
     "id": "sibyl_fall_of_rome",
     "name": "Сивилла",
-    "ability": "Каждый день после первой казни вы можете публично выбрать мёртвого игрока: он может номинировать. Если большинство мёртвых и вы согласны, его кандидат казнится.",
+    "ability": "Каждый день после первой казни может публично выбрать мёртвого игрока: он может номинировать. Если согласны большинство из мёртвых игроков и Сивиллы, этот игрок будет казнён.",
     "image": "https://raw.githubusercontent.com/botc-ru/data/refs/heads/main/images/roles/sibyl_fall_of_rome.png",
     "team": "traveller",
     "flavor": "\"Так изменюсь, что стану невидима для всех; но голос мой вы узнаете. И голосом дарую вам второй шанс.\""
@@ -72,7 +72,7 @@
   "architect_fall_of_rome": {
     "id": "architect_fall_of_rome",
     "name": "Архитектор",
-    "ability": "Каждую ночь* выбирайте игрока: 1) он становится не-игровым персонажем того же типа, или 2) он меняется персонажами с игроком того же типа.",
+    "ability": "Каждую ночь* выбирает игрока. Либо (1) тот становится ролью того же типа, которой нет в игре, либо (2) тот меняется ролями с игроком того же типа.",
     "image": "https://raw.githubusercontent.com/botc-ru/data/refs/heads/main/images/roles/architect_fall_of_rome.png",
     "team": "traveller",
     "flavor": "\"Я застал Рим кирпичным, а оставил мраморным.\" — Октавиан Август, 63 до н.э. — 14 н.э.",
@@ -81,10 +81,11 @@
   "mercenary_fall_of_rome": {
     "id": "mercenary_fall_of_rome",
     "name": "Наёмник",
-    "ability": "Каждую ночь* вы получаете способность игрока, который сегодня публично заявлял, что он Спартак. Если Наёмника изгоняют, изгоняют и вас. [+1 Наёмник противоположного мировоззрения]",
+    "ability": "Каждую ночь* получает способность игрока, который сегодня заявлял, что он Спартак. Если другого Наёмника изгоняют, изгоняют и вас.",
     "image": "https://raw.githubusercontent.com/botc-ru/data/refs/heads/main/images/roles/mercenary_fall_of_rome.png",
     "team": "traveller",
-    "otherNight": 3
+    "otherNight": 3,
+    "modifications": "+1 Наёмник в другой команде"
   },
   "ceasar_fall_of_rome": {
     "id": "ceasar_fall_of_rome",
@@ -98,17 +99,18 @@
   "hannibal_fall_of_rome": {
     "id": "hannibal_fall_of_rome",
     "name": "Ганнибал",
-    "ability": "Думает, что он добрый игрок. Приспешники знают 3 блефа. Каждую ночь* кто-то может умереть. Первый умерший Ганнибал становится добрым. [+1 Ганнибал]",
+    "ability": "Думает, что он добрый игрок. Приспешники знают 3 блефа. Каждую ночь* игрок может умереть. Первый умерший Ганнибал становится добрым.",
     "image": "https://raw.githubusercontent.com/botc-ru/data/refs/heads/main/images/roles/hannibal_fall_of_rome.png",
     "team": "demon",
     "flavor": "\"Или найду путь, или проложу его.\" — Ганнибал, 247 — ок. 182 до н.э.",
     "firstNight": 20,
-    "otherNight": 12
+    "otherNight": 12,
+    "modifications": "Получает добрую роль. +1 Ганнибал"
   },
   "crassus_fall_of_rome": {
     "id": "crassus_fall_of_rome",
     "name": "Красс",
-    "ability": "Каждую ночь* выбирает игрока: тот умирает. Если первый Красс заявил, что он Спартак, и умер при 5+ живых игроках, один из Приспешников станет Крассом.",
+    "ability": "Каждую ночь* выбирает игрока: тот умирает. Раз за игру при 5+ живых игроках, если Красс заявил, что он Спартак, и умер, один из Приспешников становится Крассом.",
     "image": "https://raw.githubusercontent.com/botc-ru/data/refs/heads/main/images/roles/crassus_fall_of_rome.png",
     "team": "demon",
     "flavor": "\"Кто стремится к великому, должен быть готов к великим страданиям...\" — Плутарх, ок. 49 — 119 н.э.",
@@ -135,7 +137,7 @@
   "glykon_fall_of_rome": {
     "id": "glykon_fall_of_rome",
     "name": "Гликон",
-    "ability": "Способности других игроков могут считать его добрым. Номинированных им добрых игроков могут до рассвета считать злыми, злых - добрыми, а Горожане отравлены.",
+    "ability": "Способности других игроков могут считать его Горожанином или Изгоем. Номинированных им добрых игроков могут до рассвета считать злыми, злых — добрыми, а Горожане отравлены.",
     "image": "https://raw.githubusercontent.com/botc-ru/data/refs/heads/main/images/roles/glykon_fall_of_rome.png",
     "team": "minion",
     "flavor": "\"Они вошли — и, конечно же, решили, что это чудо: крошечная змея всего за несколько дней выросла в огромного змея с человеческим лицом — да ещё и ручного!\" — Лукиан Самосатский о лжепророке Александре Абонутейском"
@@ -143,12 +145,13 @@
   "haruspex_fall_of_rome": {
     "id": "haruspex_fall_of_rome",
     "name": "Гаруспик",
-    "ability": "Каждую ночь выбирает игрока: узнаёт его роль. Первый, кто был выбран дважды, умирает. [+ Спартак]",
+    "ability": "Каждую ночь выбирает игрока: узнаёт его роль. Первый, кто был выбран дважды, умирает.",
     "image": "https://raw.githubusercontent.com/botc-ru/data/refs/heads/main/images/roles/haruspex_fall_of_rome.png",
     "team": "minion",
     "flavor": "\"Именно благочестие и религия, а также особая мудрость видеть, что всем управляет божественная сила бессмертных богов, сделали нас выше прочих стран и народов.\" — Цицерон, 106 — 46 до н.э.",
     "firstNight": 23,
-    "otherNight": 14
+    "otherNight": 14,
+    "modifications": "+Спартак"
   },
   "temptress_fall_of_rome": {
     "id": "temptress_fall_of_rome",
@@ -163,7 +166,7 @@
   "badomen_fall_of_rome": {
     "id": "badomen_fall_of_rome",
     "name": "Дурное знамение",
-    "ability": "Не знает, что он Дурное знамение. Думает, что он Горожанин, но получает ложь. Способности других игроков могут считать его злодеем, даже если он мёртв.",
+    "ability": "Не знает, что он Дурное знамение. Думает, что он Горожанин, но всегда узнаёт ложь. Способности других игроков могут считать его Приспешником или Демоном, даже если он мёртв.",
     "image": "https://raw.githubusercontent.com/botc-ru/data/refs/heads/main/images/roles/badomen_fall_of_rome.png",
     "team": "outsider",
     "flavor": "\"Бойся мартовских ид.\" — Гай Юлий Цезарь, 100 — 44 до н.э."
@@ -171,7 +174,7 @@
   "spartacus_fall_of_rome": {
     "id": "spartacus_fall_of_rome",
     "name": "Спартак",
-    "ability": "Раз за игру, если злодей угадал, кто Спартак, зло побеждает. Способности других игроков могут считать его Горожанином, если в этот день заявил, что он Спартак.",
+    "ability": "Раз за игру злодеи могут публично угадать, кто Спартак. Если угадали: его команда проигрывает. Способности других игроков могут считать его Горожанином, если в этот день он заявил, что он Спартак.",
     "image": "https://raw.githubusercontent.com/botc-ru/data/refs/heads/main/images/roles/spartacus_fall_of_rome.png",
     "team": "outsider",
     "flavor": "\"Человек не должен покорно принимать судьбу — иначе она его сломит.\" — Спартак, ок. 103 — 71 до н.э."
@@ -189,7 +192,7 @@
   "thetwins_fall_of_rome": {
     "id": "thetwins_fall_of_rome",
     "name": "Близнецы",
-    "ability": "В первую ночь узнаёт игрока: если одного из них казнили, все Горожане пьяны до след. заката.",
+    "ability": "В первую ночь узнаёт игрока: если одного из них казнили, все Горожане пьяны до заката.",
     "image": "https://raw.githubusercontent.com/botc-ru/data/refs/heads/main/images/roles/thetwins_fall_of_rome.png",
     "team": "outsider",
     "flavor": "\"Ссора между Ремом и Ромулом явила разделение земного града внутри себя...\" — Августин Блаженный, 354 — 430 н.э.",
@@ -199,11 +202,12 @@
   "scholar_fall_of_rome": {
     "id": "scholar_fall_of_rome",
     "name": "Учёный",
-    "ability": "Раз за игру, когда номинировал живого Изгоя, тот немедленно становится Горожанином, которого нет в игре. [+1 Изгой]",
+    "ability": "Раз за игру, когда номинировал живого Изгоя, тот немедленно становится Горожанином, которого нет в игре.",
     "image": "https://raw.githubusercontent.com/botc-ru/data/refs/heads/main/images/roles/scholar_fall_of_rome.png",
     "team": "townsfolk",
     "flavor": "\"Просыпаясь утром, помни, какое это драгоценное счастье — жить, дышать, мыслить, радоваться и любить.\" — Марк Аврелий, 121 — 180 н.э.",
-    "otherNight": 1
+    "otherNight": 1,
+    "modifications": "+1 Изгой"
   },
   "blacksmith_fall_of_rome": {
     "id": "blacksmith_fall_of_rome",
@@ -226,7 +230,7 @@
   "gladiator_fall_of_rome": {
     "id": "gladiator_fall_of_rome",
     "name": "Гладиатор",
-    "ability": "Раз за игру днём публично выбирает живого игрока. Ночью оба играют в КНБ: кто проиграл, умирает.",
+    "ability": "Раз за игру днём публично выбирает живого игрока. Ночью оба играют в камень-ножиницы-бумага: кто проиграл, умирает.",
     "image": "https://raw.githubusercontent.com/botc-ru/data/refs/heads/main/images/roles/gladiator_fall_of_rome.png",
     "team": "townsfolk",
     "flavor": "\"Простите. Меня учили владеть мечом, а не словом.\" — Крикс, 72 до н.э.",
@@ -244,7 +248,7 @@
   "centurion_fall_of_rome": {
     "id": "centurion_fall_of_rome",
     "name": "Центурион",
-    "ability": "Если номинировал и казнил живого игрока, команда того проигрывает. Демон не может его убить. Если заявил, что он Спартак: пьян до рассвета.",
+    "ability": "Если номинировал и казнил живого игрока, команда того проигрывает. Демон не может его убить. Если заявил, что он Спартак: пьян до рассвета.",
     "image": "https://raw.githubusercontent.com/botc-ru/data/refs/heads/main/images/roles/centurion_fall_of_rome.png",
     "team": "townsfolk",
     "flavor": "\"Легче найти людей, готовых умереть, чем тех, кто готов терпеть боль с терпением.\" — Гай Юлий Цезарь, 100 — 44 до н.э."
@@ -252,7 +256,7 @@
   "standardbearer_fall_of_rome": {
     "id": "standardbearer_fall_of_rome",
     "name": "Знаменосец",
-    "ability": "Если номинирован, публично называет уникальный факт о номинаторе (не о себе). Ночью узнает, прав ли он.",
+    "ability": "Если номинирован, может публично назвать уникальный факт о номинировавшем игроке. Ночью узнает, прав ли он.",
     "image": "https://raw.githubusercontent.com/botc-ru/data/refs/heads/main/images/roles/standardbearer_fall_of_rome.png",
     "team": "townsfolk",
     "flavor": "\"Не всегда говори всё, что знаешь. Но всегда знай, что говоришь.\" — Тиберий Клавдий, 10 до н.э. — 54 н.э.",
@@ -261,7 +265,7 @@
   "trumpeter_fall_of_rome": {
     "id": "trumpeter_fall_of_rome",
     "name": "Трубач",
-    "ability": "Каждую ночь* узнаёт, сколько злодеев днём публично заявили, что они Спартак.",
+    "ability": "Каждую ночь* узнаёт, сколько злодеев днём публично заявили, что они Спартак.",
     "image": "https://raw.githubusercontent.com/botc-ru/data/refs/heads/main/images/roles/trumpeter_fall_of_rome.png",
     "team": "townsfolk",
     "flavor": "\"Я сделал всё, что должен был, но исход — в руках фортуны.\" — Нерон, 37 — 68 н.э.",
@@ -270,17 +274,18 @@
   "legionary_fall_of_rome": {
     "id": "legionary_fall_of_rome",
     "name": "Легионер",
-    "ability": "Каждую ночь узнаёт, сколько живых злодеев сидят по часовой стрелке от него до следующего живого Легионера. [+0…+2 Легионера]",
+    "ability": "Каждую ночь узнаёт, сколько живых злодеев сидят по часовой стрелке от него до следующего живого Легионера.",
     "image": "https://raw.githubusercontent.com/botc-ru/data/refs/heads/main/images/roles/legionary_fall_of_rome.png",
     "team": "townsfolk",
     "flavor": "\"Мы видим, что римляне обязаны завоеванием мира не чему иному, как постоянной выучке, строгой дисциплине в лагерях и неустанному совершенствованию воинских искусств.\" — Вегеций, ок. 385 — ок. 450 н.э.",
     "firstNight": 29,
-    "otherNight": 19
+    "otherNight": 19,
+    "modifications": "+0…+2 Легионера"
   },
   "physician_fall_of_rome": {
     "id": "physician_fall_of_rome",
     "name": "Лекарь",
-    "ability": "Каждую ночь выбирает 2 игроков (не себя): этой ночью они трезвы, здоровы и узнают правду. Раз за игру, если Демон убил одного из них, узнаёт роль Демона.",
+    "ability": "Каждую ночь выбирает 2 игроков (не себя): этой ночью они трезвы, здоровы и узнают правду. Если Демон убил одного из них, узнаёт роль Демона.",
     "image": "https://raw.githubusercontent.com/botc-ru/data/refs/heads/main/images/roles/physician_fall_of_rome.png",
     "team": "townsfolk",
     "flavor": "\"Некоторые выздоравливают лишь потому, что верят врачам.\" — Гиппократ, ок. 460 — ок. 370 до н.э.",
@@ -290,7 +295,7 @@
   "vestalvirgin_fall_of_rome": {
     "id": "vestalvirgin_fall_of_rome",
     "name": "Весталка",
-    "ability": "В первую ночь узнаёт 2 роли: 1 добрую и 1 злую, одна из них есть в игре. Когда эта роль умирает, ночью узнаёт ещё 2 роли.",
+    "ability": "В первую ночь узнаёт 2 роли: добрую и злую, одна из них есть в игре. Когда эта роль умирает, ночью узнаёт ещё 2 роли.",
     "image": "https://raw.githubusercontent.com/botc-ru/data/refs/heads/main/images/roles/vestalvirgin_fall_of_rome.png",
     "team": "townsfolk",
     "flavor": "\"Одни полагают, что долг весталок — лишь хранить священный огонь; другие же считают, что им доверены иные божественные тайны, сокрытые от всех, кроме них.\" — Плутарх, ок. 49 — 119 н.э.",
