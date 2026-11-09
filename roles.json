@@ -842,7 +842,7 @@
     "flavor": "Слова, слова. Только на них мы и можем полагаться.",
     "firstNight": 21,
     "firstNightReminder": "Разбуди Демона. Покажите ему жетон Марионетки и игрока.",
-    "modifications": "Получает жетон Горожанина или Изгоя. Сосед Демона",
+    "modifications": "Получает добрую роль. Сосед Демона",
     "jinxes": [
       {
         "id": "mathematician",
@@ -1691,7 +1691,7 @@
   "lunatic": {
     "id": "lunatic",
     "name": "Лунатик",
-    "ability": "Думает, что он Демон, но это не так. Демон знает Лунатика и кого тот выбрал ночью.",
+    "ability": "Думает, что он Демон, но это не так. Демон знает Лунатика и кого тот выбрал ночью.",
     "image": "https://raw.githubusercontent.com/botc-ru/data/refs/heads/main/images/roles/lunatic.png",
     "team": "outsider",
     "flavor": "Я — сама ночь... наверное.",
