@@ -386,7 +386,7 @@
     "image": "https://raw.githubusercontent.com/botc-ru/data/refs/heads/main/images/roles/sentinel.png",
     "team": "fabled",
     "flavor": "Имя, пожалуйста. Документы, пожалуйста. Оружие, пожалуйста.",
-    "modifications": "-1 .. +1 Изгой"
+    "modifications": "-1 .. +1 Изгой"
   },
   "duchess": {
     "id": "duchess",
