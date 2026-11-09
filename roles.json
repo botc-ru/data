@@ -2040,7 +2040,7 @@
   "mayor": {
     "id": "mayor",
     "name": "Мэр",
-    "ability": "Если при 3 живых игроках днём не было казни: его команда побеждает. Ночью другой игрок может умереть вместо Мэра.",
+    "ability": "Если при 3 живых игроках днём не было казни:\nего команда побеждает. \nНочью другой игрок может умереть вместо Мэра.",
     "image": "https://raw.githubusercontent.com/botc-ru/data/refs/heads/main/images/roles/mayor.png",
     "team": "townsfolk",
     "flavor": "Мы должны отбросить разногласия и прекратить это бессмысленное кровопролитие. В конце концов, мы все налогоплательщики. Ну, большинство из нас."
@@ -2048,7 +2048,7 @@
   "soldier": {
     "id": "soldier",
     "name": "Солдат",
-    "ability": "Защищён\nот всех способностей Демона.",
+    "ability": "Защищён от всех\nспособностей Демона.",
     "image": "https://raw.githubusercontent.com/botc-ru/data/refs/heads/main/images/roles/soldier.png",
     "team": "townsfolk",
     "flavor": "Как сказал Давид Голиафу, как сказал Тезей Минотавру, как сказал Арджуна Бхагадатте... Нет."
@@ -2078,7 +2078,7 @@
   "ravenkeeper": {
     "id": "ravenkeeper",
     "name": "Хранитель воронов",
-    "ability": "Если умер ночью, выбирает игрока: узнаёт его роль.",
+    "ability": "Если умер ночью, выбирает игрока:\nузнаёт его роль.",
     "image": "https://raw.githubusercontent.com/botc-ru/data/refs/heads/main/images/roles/ravenkeeper.png",
     "team": "townsfolk",
     "flavor": "Мои птицы отомстят за меня! Летите! Летите, мои милые и преданные создания! К особняку и к реке! В переулки и салоны! Летите!",
