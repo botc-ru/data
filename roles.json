@@ -551,7 +551,7 @@
     "firstNightReminder": "Покажи 3 роли для блефа.",
     "otherNight": 30,
     "otherNightReminder": "3 ночь: Выбирает игрока и роль Демона.",
-    "modifications": "Нет Демона.",
+    "modifications": "Нет Демона",
     "jinxes": [
       {
         "id": "zombuul",
@@ -836,13 +836,13 @@
   "marionette": {
     "id": "marionette",
     "name": "Марионетка",
-    "ability": "Не знает, что она Марионетка. Думает, что она \nГорожанин или Изгой, но это не так. Демон знает Марионетку.",
+    "ability": "Не знает, что она Марионетка. Думает, что она \nГорожанин или Изгой, но это не так. Демон знает её.",
     "image": "https://raw.githubusercontent.com/botc-ru/data/refs/heads/main/images/roles/marionette.png",
     "team": "minion",
     "flavor": "Слова, слова. Только на них мы и можем полагаться.",
     "firstNight": 21,
     "firstNightReminder": "Разбуди Демона. Покажите ему жетон Марионетки и игрока.",
-    "modifications": "Получает добрую роль. Сосед Демона.",
+    "modifications": "Получает жетон Горожанина или Изгоя. Сосед Демона",
     "jinxes": [
       {
         "id": "mathematician",
@@ -934,7 +934,7 @@
   "damsel": {
     "id": "damsel",
     "name": "Дамочка",
-    "ability": "Приспешники знают, что Дамочка есть в игре. \nРаз за игру Приспешники могут публично угадать, кто Дамочка. Если угадали: её команда проигрывает.",
+    "ability": "Приспешники знают, что Дамочка есть в игре. \nРаз за игру Приспешники могут публично угадать, кто Дамочка. Если угадали: её команда проигрывает.",
     "image": "https://raw.githubusercontent.com/botc-ru/data/refs/heads/main/images/roles/damsel.png",
     "team": "outsider",
     "flavor": "Не трогай причёску, милый.",
@@ -1029,7 +1029,7 @@
     "image": "https://raw.githubusercontent.com/botc-ru/data/refs/heads/main/images/roles/atheist.png",
     "team": "townsfolk",
     "flavor": "Давайте отбросим ненужные догадки и глупую паранойю. Для всего есть рациональное объяснение. Да, возможно, чайная чашка действительно вращается вокруг планеты, слишком маленькая, чтобы её увидеть, но я предпочту выпить свой чай из реального фарфора в моих реальных руках.",
-    "modifications": "Нет злых персонажей.",
+    "modifications": "Нет злых персонажей",
     "jinxes": [
       {
         "id": "riot",
@@ -1691,7 +1691,7 @@
   "lunatic": {
     "id": "lunatic",
     "name": "Лунатик",
-    "ability": "Думает, что он Демон, но это не так. Демон знает Лунатика и кого тот выбрал ночью.",
+    "ability": "Думает, что он Демон, но это не так. Демон знает Лунатика и кого тот выбрал ночью.",
     "image": "https://raw.githubusercontent.com/botc-ru/data/refs/heads/main/images/roles/lunatic.png",
     "team": "outsider",
     "flavor": "Я — сама ночь... наверное.",
