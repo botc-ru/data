@@ -85,7 +85,7 @@
     "image": "https://raw.githubusercontent.com/botc-ru/data/refs/heads/main/images/roles/mercenary_fall_of_rome.png",
     "team": "traveller",
     "otherNight": 3,
-    "modifications": "+1 Наёмник в другой команде"
+    "modifications": "+1 Наёмник в другой команде"
   },
   "ceasar_fall_of_rome": {
     "id": "ceasar_fall_of_rome",
@@ -174,7 +174,7 @@
   "spartacus_fall_of_rome": {
     "id": "spartacus_fall_of_rome",
     "name": "Спартак",
-    "ability": "Раз за игру злодеи могут публично угадать, кто Спартак. Если угадали: его команда проигрывает. Способности других игроков могут считать его Горожанином, если в этот день он заявил, что он Спартак.",
+    "ability": "Раз за игру, если злодеи угадали, кто Спартак: его команда проигрывает. Способности других игроков могут считать его Горожанином, если в этот день он заявил, что он Спартак.",
     "image": "https://raw.githubusercontent.com/botc-ru/data/refs/heads/main/images/roles/spartacus_fall_of_rome.png",
     "team": "outsider",
     "flavor": "\"Человек не должен покорно принимать судьбу — иначе она его сломит.\" — Спартак, ок. 103 — 71 до н.э."
@@ -248,7 +248,7 @@
   "centurion_fall_of_rome": {
     "id": "centurion_fall_of_rome",
     "name": "Центурион",
-    "ability": "Если номинировал и казнил живого игрока, команда того проигрывает. Демон не может его убить. Если заявил, что он Спартак: пьян до рассвета.",
+    "ability": "Демон не может его убить. Если номинировал и казнил живого игрока, команда того проигрывает. Если заявил, что он Спартак: пьян до рассвета.",
     "image": "https://raw.githubusercontent.com/botc-ru/data/refs/heads/main/images/roles/centurion_fall_of_rome.png",
     "team": "townsfolk",
     "flavor": "\"Легче найти людей, готовых умереть, чем тех, кто готов терпеть боль с терпением.\" — Гай Юлий Цезарь, 100 — 44 до н.э."
@@ -256,7 +256,7 @@
   "standardbearer_fall_of_rome": {
     "id": "standardbearer_fall_of_rome",
     "name": "Знаменосец",
-    "ability": "Если номинирован, может публично назвать уникальный факт о номинировавшем игроке. Ночью узнает, прав ли он.",
+    "ability": "Если номинирован, может публично назвать уникальный факт о номинировавшем игроке. Ночью узнает, прав ли он.",
     "image": "https://raw.githubusercontent.com/botc-ru/data/refs/heads/main/images/roles/standardbearer_fall_of_rome.png",
     "team": "townsfolk",
     "flavor": "\"Не всегда говори всё, что знаешь. Но всегда знай, что говоришь.\" — Тиберий Клавдий, 10 до н.э. — 54 н.э.",
