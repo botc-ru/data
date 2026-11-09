@@ -2201,7 +2201,7 @@
     "ability": "",
     "image": "https://raw.githubusercontent.com/botc-ru/data/refs/heads/main/images/roles/demoninfo.png",
     "firstNight": 18,
-    "firstNightReminder": "Разбуди Демона. Покажи ему всех Приспешников. Покажи 3 роли для блефа."
+    "firstNightReminder": "Разбуди Демона. Покажи ему всех Приспешников. Покажи 3 роли для блефа."
   },
   "minioninfo": {
     "id": "minioninfo",
