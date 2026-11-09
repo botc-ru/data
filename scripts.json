@@ -478,6 +478,7 @@
     {
       "id": "_meta",
       "name": "Удлинитель",
+      "author": "Viva La Sam",
       "logo": "https://raw.githubusercontent.com/botc-ru/data/refs/heads/main/images/scripts/SCRIPT-5.png"
     },
     "investigator",
@@ -510,6 +511,7 @@
     {
       "id": "_meta",
       "name": "Половина от 108 и ещё немного",
+      "author": "by vorondesan",
       "logo": "https://raw.githubusercontent.com/botc-ru/data/refs/heads/main/images/scripts/SCRIPT-4.png"
     },
     "baron",
