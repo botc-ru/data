@@ -458,9 +458,9 @@
     "team": "minion",
     "flavor": "Они падают. Один за другим. По два, по три, по пять.",
     "firstNight": 26,
-    "firstNightReminder": "Отметь Ксаана НОЧЬ 1. Если X равен 1, отметьте Ксаана Х",
+    "firstNightReminder": "Отметь НОЧЬ 1. 𒊹 Если X равен 1, отметь НОЧЬ Х. 𒊹",
     "otherNight": 12,
-    "otherNightReminder": "Отметь Ксаана номером ночи. Если сейчас ночь X, отметь Ксаана Х",
+    "otherNightReminder": "Отметь НОЧЬ. 𒊹 Если сейчас НОЧЬ X, отметь её. 𒊹",
     "modifications": "X Изгоев"
   },
   "boffin": {
@@ -986,7 +986,7 @@
   "snitch": {
     "id": "snitch",
     "name": "Стукач",
-    "ability": "Каждый Приспешник получает 3 блефа.",
+    "ability": "Каждый Приспешник \nполучает 3 блефа.",
     "image": "https://raw.githubusercontent.com/botc-ru/data/refs/heads/main/images/roles/snitch.png",
     "team": "outsider",
     "flavor": "Это был Джон.",
@@ -1044,9 +1044,9 @@
     "team": "townsfolk",
     "flavor": "В укромных рощах дремучего леса растёт чёрный мак. Один взгляд на его цветение — и ты зачарован. Один вдох его густого аромата — и ты потерян навсегда, став рабом богов света и тьмы.",
     "firstNight": 11,
-    "firstNightReminder": "Приспешники и Демон не знакомятся",
+    "firstNightReminder": "Приспешники и Демон не знакомятся.",
     "otherNight": 8,
-    "otherNightReminder": "Если Маковод умер сегодня, познакомьте Приспешников и Демона",
+    "otherNightReminder": "Если Маковод умер, познакомь Приспешников и Демона.",
     "jinxes": [
       {
         "id": "lilmonsta",
@@ -1246,9 +1246,9 @@
     "team": "townsfolk",
     "flavor": "Я одинокий охотник в этом городе, пропитанном зловонием коррупции. Оно проникает в ноздри, обжигая омерзением. И предвкушением. Болезнь этого проклятого места распространяется с каждой ночью. А я... Я — лекарство.",
     "firstNight": 63,
-    "firstNightReminder": "Покажите игрока: Untitled ",
+    "firstNightReminder": "Покажите игрока.",
     "otherNight": 81,
-    "otherNightReminder": "Если игрок Untitled умер, отметь другого злого игрока Untitled, покажи его",
+    "otherNightReminder": "Если отмеченный злой игрок умер, покажи нового злого игрока. 𒊹",
     "modifications": "1 Горожанин — злой",
     "jinxes": [
       {
